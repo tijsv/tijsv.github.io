@@ -60,12 +60,23 @@ $(function(){
   });
 
   $('ul li').find('a').click(function(){
+    
     var $href = $(this).attr('href');
     var $anchor = $('#'+$href).offset();
+
     $('html, body').animate({
       scrollTop: $anchor.top,
     },250);
+
+    AOS.init({
+      offset: 50,
+      duration: 1000,
+      easing: 'ease',
+      delay: 250,
+    }); 
+
     return false;
+
   });
 
 });

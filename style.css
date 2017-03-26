@@ -186,7 +186,7 @@ h1 {
 }
 
 .about-inner, .cases-inner, .contact-inner {
-  width: 40%;
+  width: 50%;
   margin: 150px auto 250px auto;
 }
 
@@ -204,6 +204,7 @@ h1 {
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 1px;
+  padding-right: 30%;
 }
 
 .about {
@@ -218,6 +219,19 @@ h1 {
 .cases {
   background-color: #904E55;
   color: #ffffff;
+}
+
+.cases-h2 {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 40px;
+
+}
+
+.cases-p {
+  text-align: right;
+  padding-right: 0;
+  padding-left: 30%;
 }
 
 .cases-h2-color1 {
@@ -244,6 +258,7 @@ h1 {
   margin: 20px auto;
   font-size: 10px;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .footer-p-small {
@@ -255,12 +270,3 @@ h1 {
   font-size: 7px;
   letter-spacing: 0.4;
 }
-
-.footer-p-left {
-  text-align: left;
-}
-
-.footer-p-right{
-  float: right;
-}
-
