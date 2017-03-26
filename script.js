@@ -59,6 +59,15 @@ $(function(){
     }
   });
 
+  $('ul li').find('a').click(function(){
+    var $href = $(this).attr('href');
+    var $anchor = $('#'+$href).offset();
+    $('html, body').animate({
+      scrollTop: $anchor.top,
+    },250);
+    return false;
+  });
+
 });
 
 
