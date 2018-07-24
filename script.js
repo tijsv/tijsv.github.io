@@ -1,4 +1,5 @@
 function main() {
+  var backgroundLines = document.getElementById('lines').getElementsByClassName('line');
   // main line to animate
   var mainLine = showSection("home");
   // generates an array with the menu items in it
@@ -9,7 +10,8 @@ function main() {
   }
   for(i=0;i<menuListItems.length;i++) {
     menuListItems[i].onclick = function() {
-      if (this.className === "selected") {
+      document.getElementById('menu').classList.toggle('unclickable');
+      if (this.classList.contains("selected")) {
         return;
       }
       for(j=0;j<menuListItems.length;j++) {
@@ -19,6 +21,14 @@ function main() {
       var menuListItemData = this.dataset.li;
       var visibleSection = document.getElementsByClassName('visible')[0];
       mainLine.classList.toggle('main-line-end');
+      for(l=0;l<backgroundLines.length;l++){
+        backgroundLines[l].classList.toggle('line-end');
+      }
+      setTimeout(function(){
+        for(l=0;l<backgroundLines.length;l++){
+          backgroundLines[l].classList.toggle('line-end');
+        }
+      },601);
       var textElements = visibleSection.children[0].children;
       for(k=0;k<textElements.length;k++) {
         if(!textElements[k].classList.contains('main-line')) {
@@ -33,6 +43,9 @@ function main() {
             allSections[j].classList.toggle('visible');
             mainLine.classList.toggle('main-line-end');
             mainLine.classList.toggle('main-line-start');
+            for(l=0;l<backgroundLines.length;l++){
+              backgroundLines[l].classList.toggle('line-start');
+            }
             for(k=0;k<textElements.length;k++) {
               if(!textElements[k].classList.contains('main-line')) {
                 textElements[k].classList.toggle('text-end');
@@ -43,6 +56,7 @@ function main() {
             break;
           }
         }
+        document.getElementById('menu').classList.toggle('unclickable');
       },1001);
 
     }

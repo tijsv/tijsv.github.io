@@ -11,6 +11,10 @@ h1,h2,h3,h4,h5,p,ul,li,body {
   padding:0;
 }
 
+.unclickable {
+  pointer-events: none;
+}
+
 #lines {
   position: fixed;
   width: 100vw;
@@ -26,32 +30,37 @@ h1,h2,h3,h4,h5,p,ul,li,body {
     left: 10%;;
     top: 5%;
     width: 30%;
-    transition: 1s all ease-in-out;
+    transition: 0.8s all ease-in-out;
   }
   .line2 {
     opacity: 0.2;
     left: 50%;
     top: 10%;
     width: 35%;
-    transition: 1.1s all ease-in-out;
+    transition: 0.9s all ease-in-out;
   }
   .line3 {
     opacity: 0.1;
     left: 20%;
     top: 25%;
     width: 45%;
-    transition: 1.2s all ease-in-out;
+    transition: 0.8s all ease-in-out;
   }
   .line4 {
     opacity: 0.1;
     left: 65%;
     top: 80%;
     width: 30%;
-    transition: 1.3s all ease-in-out;
+    transition: 0.9s all ease-in-out;
   }
   .line-start {
-    transition: 1.4s all ease-in-out;
+    transition: 0.001s all ease-in-out;
     left: 100%;
+    opacity: 0;
+  }
+  .line-end {
+    transition: 0.6s all ease-in-out;
+    left: -100%;
     opacity: 0;
   }
 }
