@@ -1,102 +1,119 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="aos.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,600,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Martel:900" rel="stylesheet">
+  </head>
   <body>
 
-    <div class="header absolute" data-aos="fade-down" data-aos-delay="500">
-
-        <div class="menu-icon">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-
-        <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#cases">cases</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-
+    <div id="lines">
+      <div class="line line1 line-start"></div>
+      <div class="line line2 line-start"></div>
+      <div class="line line3 line-start"></div>
+      <div class="line line4 line-start"></div>
     </div>
 
-    <div class="introduction"> 
-      <!-- data-aos-delay="500" data-aos-duration="500" -->
-      <div class="introduction-inner"> 
-        <h1 data-aos="fade-right" data-aos-delay="500"><span class="h1-color3">// </span><span class="h1-color1">H</span>I <span class="h1-color2">T</span>HERE<span class="h1-color3">.</span></h1>
-        <p class="introduction-p" data-aos="fade-left" data-aos-delay="1000">My name is <span class="p-bold">Tijs Verellen</span>. I'm a 22 years old <span class="p-bold2">junior graphic designer</span> from Belgium and currently a student at the AP university college of Antwerp. I do <span class="p-bold">websites</span>, <span class="p-bold">branding</span> and other <span class="p-bold">designy stuff</span>.</p>
-      </div>
-
+    <div id="menu">
+      <ul>
+        <li class="selected" data-li="home">Home</li>
+        <li data-li="story">Story</li>
+        <li data-li="skills">Skills</li>
+        <li data-li="work">Work</li>
+        <li data-li="contact">Contact</li>
+      </ul>
     </div>
 
-    <div class="image" data-aos="fade-left"></div>
-
-    <div class="content">
-
-      <div class="about" id="about">
-
-        <div class="about-inner">
-          <h2 class ="about-h2" data-aos="fade-right"><span class="about-h2-color1">//</span> about me</h2>
-          <p class="about-p" data-aos="fade-up">Nullam posuere posuere lacus et sollicitudin. Vestibulum ultrices nibh vehicula mi tempor pretium. Duis tempor eros odio, luctus dictum nunc tincidunt sed. Praesent placerat ex nec lectus aliquam, maximus pulvinar velit varius. Duis eleifend ligula sed dui tempor molestie. Quisque eu vestibulum justo. Maecenas tempor diam tempus sodales dapibus.</p>
-        </div>
-
+    <div id="home" class="section visible">
+      <div id="home-inner" class="section-inner">
+        <h2 class="text-start">Hello there, my name is</h2>
+        <h1 class="text-start">Tijs Verellen</h1>
+        <div class="main-line main-line-start"></div>
+        <p class="text-start">
+          I'm a 23-year-old <span>front-end developer</span> and
+          <span>graphic designer</span> from Antwerp, Belgium.
+          <br>I do websites, logos, branding and other designy stuff.
+        </p>
       </div>
-
-      <div class="cases" id="cases">
-
-        <div class="cases-inner">
-          <h2 class ="cases-h2" data-aos="fade-left"><span class="cases-h2-color1">//</span> some cases</h2>
-          <p class="cases-p" data-aos="fade-up">Nullam posuere posuere lacus et sollicitudin. Vestibulum ultrices nibh vehicula mi tempor pretium. Duis tempor eros odio, luctus dictum nunc tincidunt sed. Praesent placerat ex nec lectus aliquam, maximus pulvinar velit varius. Duis eleifend ligula sed dui tempor molestie. Quisque eu vestibulum justo. Maecenas tempor diam tempus sodales dapibus.</p>
-        </div>
-
-      </div>
-
-      <div class="contact" id="contact">
-
-        <div class="contact-inner">
-          <h2 class ="contact-h2" data-aos="fade-right"><span class="contact-h2-color1">//</span> contact</h2>
-          <p class="contact-p" data-aos="fade-up">Nullam posuere posuere lacus et sollicitudin. Vestibulum ultrices nibh vehicula mi tempor pretium. Duis tempor eros odio, luctus dictum nunc tincidunt sed. Praesent placerat ex nec lectus aliquam, maximus pulvinar velit varius. Duis eleifend ligula sed dui tempor molestie. Quisque eu vestibulum justo. Maecenas tempor diam tempus sodales dapibus.</p>
-        </div>
-
-      </div>
-
-      <div class="footer">
-
-        <div class="footer-inner">
-          <p class="footer-p" data-aos="fade-up" data-aos-offset="20">Made by Tijs Verellen - All rights reserved. <span class="footer-p-small">I guess...</span> <span class="footer-p-tiny">Right?</span></p>
-        </div>
-
-      </div>
-
     </div>
 
-    
+    <div id="story" class="section">
+      <div id="story-inner" class="section-inner">
+        <h1 class="text-start">STORY</h1>
+        <div class="main-line main-line-start"></div>
+        <p class="text-start">
+          Since I was 15 years old I'm in love with graphic design.
+          <br>First I started to teach myself the basics of photo manipulation and soon after I learned to design 2D and 3D logos.
+          I pursued my passion and last year <span>I graduated with honors from the AP university college of Antwerp as a crossmedia designer</span>.
+          <br>Currently I'm studying computer science at the Univerity of Antwerp to further understand the fundamentals of programming,
+          so I'm ready for the future as a front-end developer and all-round crossmedia designer.
+        </p>
+      </div>
+    </div>
 
+    <div id="skills" class="section">
+      <div id="skills-inner" class="section-inner">
+        <h1 class="text-start">SKILLS</h1>
+        <div class="main-line main-line-start"></div>
+        <div class="skill-items text-start">
+          <div class="skill">
+            <h3><span>P</span>rogramming</h3>
+            <ul>
+              <li>HTML, CSS and Javascript</li>
+              <li>Python</li>
+              <li>C++</li>
+              <li>PHP and MySQL (limited)</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3><span>B</span>randing</h3>
+            <ul>
+              <li>2D/3D logos</li>
+              <li>Corporate identity</li>
+              <li>Posters</li>
+              <li>Flyers</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3><span>O</span>thers</h3>
+            <ul>
+              <li>Websites built with a CMS</li>
+              <li>Short videos (brand intros etc)</li>
+              <li>Photo manipulations</li>
+              <li>Open for arty projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div id="work" class="section">
+      <div id="work-inner" class="section-inner">
+        <h1 class="text-start">WORK</h1>
+        <div class="main-line main-line-start"></div>
+        <p class="text-start">
+          Since I was 15 years old I'm in love with graphic design.
+          <br>First I started to teach myself the basics of photo manipulation and soon after I learned to design 2D and 3D logos.
+          I pursued my passion and last year <span>I graduated with honors from the AP university college of Antwerp as a crossmedia designer</span>.
+          <br>Currently I'm studying computer science at the Univerity of Antwerp to further understand the fundamentals of programming,
+          so I'm ready for the future as a front-end developer and all-round crossmedia designer.
+        </p>
+      </div>
+    </div>
 
+    <div id="contact" class="section">
+      <div id="contact-inner" class="section-inner">
+        <h1 class="text-start">CONTACT</h1>
+        <div class="main-line main-line-start"></div>
+        <p class="text-start">
+          Since I was 15 years old I'm in love with graphic design.
+          <br>First I started to teach myself the basics of photo manipulation and soon after I learned to design 2D and 3D logos.
+          I pursued my passion and last year <span>I graduated with honors from the AP university college of Antwerp as a crossmedia designer</span>.
+          <br>Currently I'm studying computer science at the Univerity of Antwerp to further understand the fundamentals of programming,
+          so I'm ready for the future as a front-end developer and all-round crossmedia designer.
+        </p>
+      </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="jquery-3.1.1.min.js"></script>
-    <script src="aos.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

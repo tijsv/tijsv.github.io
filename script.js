@@ -1,85 +1,77 @@
-$(function(){
+function main() {
+  // main line to animate
+  var mainLine = showSection("home");
+  // generates an array with the menu items in it
+  var menu = document.getElementById('menu');
+  var menuListItems = [];
+  for (i=0;i<menu.getElementsByTagName('li').length;i++) {
+    menuListItems.push(menu.getElementsByTagName('li')[i]);
+  }
+  for(i=0;i<menuListItems.length;i++) {
+    menuListItems[i].onclick = function() {
+      if (this.className === "selected") {
+        return;
+      }
+      for(j=0;j<menuListItems.length;j++) {
+        menuListItems[j].classList.remove('selected');
+      }
+      this.classList.toggle('selected');
+      var menuListItemData = this.dataset.li;
+      var visibleSection = document.getElementsByClassName('visible')[0];
+      mainLine.classList.toggle('main-line-end');
+      var textElements = visibleSection.children[0].children;
+      for(k=0;k<textElements.length;k++) {
+        if(!textElements[k].classList.contains('main-line')) {
+          textElements[k].classList.toggle('text-end');
+        }
+      }
+      setTimeout(function(){
+        visibleSection.classList.toggle('visible');
+        var allSections = document.getElementsByClassName('section');
+        for(j=0;j<allSections.length;j++) {
+          if(allSections[j].id === menuListItemData){
+            allSections[j].classList.toggle('visible');
+            mainLine.classList.toggle('main-line-end');
+            mainLine.classList.toggle('main-line-start');
+            for(k=0;k<textElements.length;k++) {
+              if(!textElements[k].classList.contains('main-line')) {
+                textElements[k].classList.toggle('text-end');
+                textElements[k].classList.toggle('text-start');
+              }
+            }
+            mainLine = showSection(allSections[j].id);
+            break;
+          }
+        }
+      },1001);
 
-  AOS.init({
-    offset: 50,
-    duration: 1000,
-    easing: 'ease',
-    delay: 250,
-  });
-
-  function fixed(){
-    $('.absolute').css('position','fixed').css('background-color','rgba(251,255,185,1)').css('top','-100px').css('opacity','0');
-    $('.absolute').animate({
-      top:'0px',
-      opacity:'1',
-    },400);
-  };
-
-  function absolute(){
-    $('.absolute').animate({
-      top:'-100px',
-      opacity:'0',
-    },400);
-    $('.absolute').css('position','absolute');
-    setTimeout(function(){
-      $('.absolute').css('background-color','rgba(255,255,255,0)');
-    },400);
-    $('.absolute').animate({
-      top:'0px',
-      opacity:'1',
-    },400);
-  };
-
-  var count = 0;
-  $(window).scroll(function() {
-    if ( $(window).scrollTop() > 300 & count === 0 ) { 
-      fixed();
-      count = count + 1;
-    } else if ( $(window).scrollTop() === 0 & count === 1 ) {
-      absolute();
-      count = count - 1;
     }
-  });
+  }
+}
 
+// hide function?
 
-  // menu icon animation on click
-
-  $('.menu-icon').on('click', function(){
-    $('.menu-icon').toggleClass("animate-line");
-    if ($('.header ul').css('opacity') == 0) {
-      $('.header ul').animate({
-        opacity: 1,
-        paddingLeft: 20,
-      },500);
-    } else {
-      $('.header ul').animate({
-        opacity: 0,
-        paddingLeft: 0,
-      },500);
+// function that handles the animation of showing a new section
+function showSection(sectionName) {
+  var thisSection = document.getElementById(sectionName);
+  var textElements = thisSection.children[0].children;
+  var mainLine = thisSection.getElementsByClassName('main-line')[0];
+  var backgroundLines = document.getElementById('lines').getElementsByClassName('line');
+  setTimeout(function(){
+    for (i=0;i<backgroundLines.length;i++) {
+      backgroundLines[i].classList.toggle('line-start');
     }
-  });
+    mainLine.classList.toggle('main-line-start');
+    for(k=0;k<textElements.length;k++) {
+      if(!textElements[k].classList.contains('main-line')) {
+        console.log(textElements[k]);
+        textElements[k].classList.toggle('text-start');
+      }
+    }
+  },250)
+  return mainLine;
+}
 
-  $('ul li').find('a').click(function(){
-    
-    var $href = $(this).attr('href');
-    var $anchor = $('#'+$href).offset();
-
-    $('html, body').animate({
-      scrollTop: $anchor.top,
-    },250);
-
-    AOS.init({
-      offset: 50,
-      duration: 1000,
-      easing: 'ease',
-      delay: 250,
-    }); 
-
-    return false;
-
-  });
-
-});
-
-
-
+window.onload = function() {
+  main();
+}
