@@ -1,7 +1,8 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #141414;
-  overflow: hidden; }
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
 h1, h2, h3, h4, h5, p, ul, li, body {
   margin: 0;
@@ -12,8 +13,10 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 
 #lines {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   opacity: 0.5; }
   #lines .line {
     position: relative;
@@ -54,8 +57,12 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 
 #menu {
   position: fixed;
-  bottom: 5vh;
-  width: 100vw; }
+  z-index: 10;
+  bottom: 7.5%;
+  width: 100%; }
+  #menu p {
+    display: none;
+    color: white; }
   #menu ul {
     width: 50%;
     margin: 0 auto;
@@ -75,11 +82,17 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       transition: 0.4s all ease-in-out; }
 
 .section {
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: none;
-  align-items: center; }
+  align-items: center;
+  min-height: min-content;
+  padding: 40px 0; }
   .section .section-inner {
+    padding-bottom: 5%;
     width: 100%; }
     .section .section-inner .main-line {
       position: relative;
@@ -94,7 +107,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       transition: 1s all ease-out; }
     .section .section-inner .main-line-end {
       left: -60%;
-      transition: 1s all ease-out; }
+      transition: 1s all ease-out;
+      overflow: auto; }
     .section .section-inner h1 {
       text-transform: uppercase;
       font-size: 3.5em;
@@ -143,8 +157,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
             color: white;
             font-size: 0.9em;
             font-weight: 400;
-            line-height: 1.8em;
-            text-transform: uppercase; }
+            line-height: 1.8em; }
     .section .section-inner .text-start {
       left: 4%;
       transition: 1s all ease-in-out;
@@ -163,4 +176,78 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   width: 65%; }
 
 .visible {
-  display: flex !important; }
+  display: flex; }
+
+@media only screen and (max-width: 1280px) {
+  .section .section-inner h1, .section .section-inner h2, .section .section-inner p {
+    width: 70%; }
+  .section .section-inner .skill-items {
+    width: 80%; }
+
+  #skills #skills-inner h1 {
+    width: 80%; } }
+@media only screen and (max-width: 960px) {
+  .section .section-inner h1, .section .section-inner h2, .section .section-inner p {
+    width: 80%; }
+  .section .section-inner .skill-items {
+    width: 90%; }
+
+  #skills #skills-inner h1 {
+    width: 90%; } }
+@media only screen and (max-width: 800px) {
+  .section .section-inner .skill-items {
+    width: 60%; }
+    .section .section-inner .skill-items .skill {
+      width: 100%;
+      margin-bottom: 40px; }
+    .section .section-inner .skill-items .skill:last-child {
+      margin-bottom: 0; }
+
+  #skills #skills-inner h1 {
+    width: 60%; }
+
+  #menu {
+    top: 40px; }
+
+  .section {
+    top: 80px;
+    bottom: -80px; } }
+@media only screen and (max-width: 600px) {
+  #menu {
+    padding: 40px 0;
+    top: auto;
+    bottom: auto;
+    background-color: #141414; }
+    #menu p {
+      color: #f0f0f0;
+      display: inline-block;
+      padding: 0 0 0 0;
+      text-transform: uppercase;
+      font-size: 1.6em;
+      font-weight: 400;
+      cursor: pointer;
+      display: block;
+      text-align: center; }
+    #menu ul {
+      display: none; }
+      #menu ul li {
+        float: none;
+        display: block;
+        width: 100%;
+        padding: 15% 0;
+        text-align: center;
+        font-size: 1.6em; }
+
+  .menu-clicked {
+    height: 100%; }
+    .menu-clicked ul {
+      display: block !important;
+      height: 100%; }
+      .menu-clicked ul li {
+        position: relative;
+        top: 10%;
+        bottom: 10%; }
+
+  .section {
+    top: 80px;
+    bottom: -80px; } }

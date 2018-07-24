@@ -1,9 +1,17 @@
+//TODO: - menu needs a lot of work (responsive)$
+//      - work and contact needs content
+//      - some graphics to add ?
+
 function main() {
   var backgroundLines = document.getElementById('lines').getElementsByClassName('line');
   // main line to animate
   var mainLine = showSection("home");
   // generates an array with the menu items in it
   var menu = document.getElementById('menu');
+  var menuButton = menu.getElementsByTagName('p')[0];
+  menuButton.onclick = function() {
+    menu.classList.toggle('menu-clicked');
+  }
   var menuListItems = [];
   for (i=0;i<menu.getElementsByTagName('li').length;i++) {
     menuListItems.push(menu.getElementsByTagName('li')[i]);
@@ -57,7 +65,7 @@ function main() {
           }
         }
         document.getElementById('menu').classList.toggle('unclickable');
-      },1001);
+      },1250);
 
     }
   }
