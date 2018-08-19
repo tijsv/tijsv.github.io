@@ -124,7 +124,12 @@ function createWorkGrid() {
       "website"
     ],
     [
-      "cinema.me (own project)",
+      "Waardevol Werk",
+      "works/waardevolwerk.png",
+      "website"
+    ],
+    [
+      "cinema.me (own project + under construction)",
       "works/cinemame.png",
       "website"
     ],
