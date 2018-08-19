@@ -28,7 +28,9 @@ function main() {
       this.classList.toggle('selected');
       var menuListItemData = this.dataset.li;
       var visibleSection = document.getElementsByClassName('visible')[0];
-      mainLine.classList.toggle('main-line-end');
+      if(mainLine) {
+          mainLine.classList.toggle('main-line-end');
+      }
       for(l=0;l<backgroundLines.length;l++){
         backgroundLines[l].classList.toggle('line-end');
       }
@@ -40,7 +42,7 @@ function main() {
       var textElements = visibleSection.children[0].children;
       for(k=0;k<textElements.length;k++) {
         if(!textElements[k].classList.contains('main-line')) {
-          textElements[k].classList.toggle('text-end');
+          textElements[k].classList.toggle('animation-end');
         }
       }
       setTimeout(function(){
@@ -49,15 +51,17 @@ function main() {
         for(j=0;j<allSections.length;j++) {
           if(allSections[j].id === menuListItemData){
             allSections[j].classList.toggle('visible');
-            mainLine.classList.toggle('main-line-end');
-            mainLine.classList.toggle('main-line-start');
+            if(mainLine) {
+              mainLine.classList.toggle('main-line-end');
+              mainLine.classList.toggle('main-line-start');
+            }
             for(l=0;l<backgroundLines.length;l++){
               backgroundLines[l].classList.toggle('line-start');
             }
             for(k=0;k<textElements.length;k++) {
               if(!textElements[k].classList.contains('main-line')) {
-                textElements[k].classList.toggle('text-end');
-                textElements[k].classList.toggle('text-start');
+                textElements[k].classList.toggle('animation-end');
+                textElements[k].classList.toggle('animation-start');
               }
             }
             mainLine = showSection(allSections[j].id);
@@ -67,6 +71,16 @@ function main() {
         document.getElementById('menu').classList.toggle('unclickable');
       },1250);
 
+    }
+  }
+  createWorkGrid();
+  var singleWorks = document.getElementsByClassName('single-work');
+  for(i=0;i<singleWorks.length;i++) {
+    singleWorks[i].onclick = function() {
+      // for(j=0;j<singleWorks.length;j++) {
+      //   singleWorks[j].classList.add('grow');
+      // }
+      document.getElementById('work-main').classList.add('grow');
     }
   }
 }
@@ -83,15 +97,81 @@ function showSection(sectionName) {
     for (i=0;i<backgroundLines.length;i++) {
       backgroundLines[i].classList.toggle('line-start');
     }
-    mainLine.classList.toggle('main-line-start');
+    if(mainLine) {
+      mainLine.classList.toggle('main-line-start');
+    }
     for(k=0;k<textElements.length;k++) {
       if(!textElements[k].classList.contains('main-line')) {
-        console.log(textElements[k]);
-        textElements[k].classList.toggle('text-start');
+        // console.log(textElements[k]);
+        textElements[k].classList.toggle('animation-start');
       }
     }
   },250)
   return mainLine;
+}
+
+function createWorkGrid() {
+  var grid = document.getElementById('work-main');
+  var allWorks = [
+    [
+      "Landingpage Zenjoy Technologies",
+      "works/landingspage.png",
+      "website + logo + video"
+    ],
+    [
+      "Van Dessel Plastics",
+      "works/vandesselplastic.png",
+      "website"
+    ],
+    [
+      "cinema.me (own project)",
+      "works/cinemame.png",
+      "website"
+    ],
+    [
+      "Bezorgde Berlaarse Burgers",
+      "works/bbb.png",
+      "logo"
+    ],
+    [
+      "Infographic of Electric Production",
+      "works/infographic.png",
+      "infographic"
+    ],
+    [
+      "Subbassmentz",
+      "works/subbassmentz.png",
+      "logo + 3D"
+    ],
+    [
+      "Grietje",
+      "works/grietje.png",
+      "poster + video"
+    ],
+    [
+      "Another World",
+      "works/anotherworld.png",
+      "poster + video"
+    ]
+  ];
+  for(i=0;i<allWorks.length;i++) {
+    var newElement = document.createElement('div');
+    var newImage = document.createElement('img');
+    var newText = document.createElement('p');
+    var newTextDiv = document.createElement('div');
+    var newTag = document.createElement('p');
+    newImage.src = allWorks[i][1];
+    newElement.className = "single-work";
+    newTextDiv.className = "single-work-inner";
+    newTag.className = "single-work-tag";
+    newText.innerHTML = allWorks[i][0];
+    newTag.innerHTML = allWorks[i][2];
+    newTextDiv.append(newText);
+    newElement.append(newTag);
+    newElement.append(newTextDiv);
+    newElement.append(newImage);
+    grid.append(newElement);
+  }
 }
 
 window.onload = function() {

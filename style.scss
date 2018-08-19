@@ -4,7 +4,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: rgba(20,20,20,1);
   overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 h1,h2,h3,h4,h5,p,ul,li,body {
@@ -190,12 +189,12 @@ h1,h2,h3,h4,h5,p,ul,li,body {
         }
       }
     }
-    .text-start {
+    .animation-start {
       left: 4%;
       transition: 1s all ease-in-out;
       opacity: 0;
     }
-    .text-end {
+    .animation-end {
       left: -2%;
       transition: 0.8s all ease-in-out;
       opacity: 0;
@@ -222,9 +221,99 @@ h1,h2,h3,h4,h5,p,ul,li,body {
   }
 }
 
+#work {
+  #work-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    #work-main {
+      width: 100vw;
+      transition: 1.2s all ease-in-out;
+      .single-work {
+        width: 17.6vw;
+        height: 17.6vw;
+        margin-top: 2vw;
+        margin-left: 2vw;
+        float: left;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          transform: scale(1.01);
+          transition: 0.3s all ease;
+        }
+        .single-work-inner {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: rgba(20,20,20,0.9);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 5;
+          opacity: 0;
+          transition: 0.3s all ease;
+          p {
+            color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+          }
+        }
+        .single-work-tag {
+          position: absolute;
+          width: auto;
+          top: 0;
+          padding: 10px;
+          color: white;
+          z-index: 10;
+          background-color: rgba(20,20,20,1);
+          text-transform: uppercase;
+        }
+      }
+      .single-work:hover {
+        img {
+          transform: scale(1.1);
+          transition: 0.3s all ease;
+        }
+        .single-work-inner {
+          opacity: 1;
+          transition: 0.3s all ease;
+        }
+      }
+    }
+    .grow {
+      .single-work {
+        width: 20vw !important;
+        height: 20vw !important;
+        margin-top: 0vw !important;
+        margin-left: 0vw !important;
+        transition: 1.2s all ease;
+      }
+    }
+  }
+}
+
 .visible {
   display: flex;
 }
+
+
+
+
+
 
 @media only screen and (max-width: 1280px) {
   .section {
