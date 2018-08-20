@@ -32,11 +32,11 @@ function main() {
       allSectionsOffset[i][0] = allSections[i].offsetTop;
     }
   });
-  console.log(allSectionsOffset);
+  // console.log(allSectionsOffset);
   document.getElementsByTagName('body')[0].onscroll = () => {
     for(i = 1; i < allSectionsOffset.length; i++) {
       if(window.scrollY > allSectionsOffset[i-1][0] && allSectionsOffset[i][1] == false && allSections[i]) {
-        console.log('div passed...');
+        // console.log('div passed...');
         allSectionsOffset[i][1] = true;
         var object = allSections[i].getElementsByTagName('h1')[0];
         var string = object.dataset.string.split('');
@@ -61,9 +61,9 @@ function main() {
 // function that writes letters
 function writeLetters(index, letters, object, callback = () => {}) {
   object.innerHTML += letters[index];
-  var delay = Math.floor(Math.random() * 40) + 60;
+  var delay = Math.floor(Math.random() * 40) + 40;
   if(letters[index] === ",") {
-    delay = 1000;
+    delay = 600;
   }
   index++;
   if(index < letters.length) {
