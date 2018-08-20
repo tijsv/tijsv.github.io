@@ -1,13 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
 
-    <div id="lines">
+    <div id="home" class="section">
+      <div class="gradient"></div>
+      <div class="background"></div>
+      <div id="home-inner">
+        <h2 data-string="Hello there, my name is"><span>|</span></h2>
+        <h1 data-string="Tijs Verellen"><span>|</span></span></h1>
+        <p>
+          I'm a 23-year-old <span>front-end developer</span> and
+          <span>graphic designer</span> from Antwerp, Belgium.
+          <br>Here you can find some information about me and my work.
+          <br>I do websites, logos, branding and other designy stuff.
+        </p>
+      </div>
+    </div>
+
+    <div id="story" class="section">
+      <div id="story-inner">
+        <h1 data-string="Story"><span>|</span></h1>
+        <p class="content">
+          Since I was 15 years old <span>I'm in love with graphic design</span>.
+          <br>First I started to teach myself the basics of photo manipulation and soon after I learned to design 2D and 3D logos.
+          I pursued my passion and last year <span>I graduated with honors from the AP university college of Antwerp as a crossmedia designer</span>.
+          <br>Currently I'm studying computer science at the Univerity of Antwerp to further understand the fundamentals of programming,
+          so I'm ready for the future as a front-end developer and all-round crossmedia designer.
+        </p>
+      </div>
+    </div>
+
+    <div id="skills" class="section">
+      <div id="skills-inner">
+        <h1 data-string="Skills"><span>|</span></h1>
+        <div class="skill-items content">
+          <div class="skill">
+            <h3><span>P</span>rogramming</h3>
+            <ul>
+              <li>HTML, CSS and Javascript</li>
+              <li>Python</li>
+              <li>C++</li>
+              <li>PHP and MySQL (limited)</li>
+            </ul>
+          </div>
+          <div class="skill darker">
+            <h3><span>B</span>randing</h3>
+            <ul>
+              <li>2D/3D logos</li>
+              <li>Corporate identity</li>
+              <li>Posters</li>
+              <li>Flyers</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3><span>O</span>thers</h3>
+            <ul>
+              <li>Websites built with a CMS</li>
+              <li>Short videos (brand intros etc)</li>
+              <li>Photo manipulations</li>
+              <li>Open for arty projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="lines">
       <div class="line line1 line-start"></div>
       <div class="line line2 line-start"></div>
       <div class="line line3 line-start"></div>
@@ -45,10 +108,10 @@
         <h1 class="animation-start">STORY</h1>
         <div class="main-line main-line-start"></div>
         <p class="animation-start">
-          Since I was 15 years old I'm in love with graphic design.
-          <br>First I started to teach myself the basics of photo manipulation and soon after I learned to design 2D and 3D logos.
+          Since I was 15 years old <span>I'm in love with graphic design</span>.
+          <br><br>First I started to teach myself the basics of photo manipulation and soon after I learned to design 2D and 3D logos.
           I pursued my passion and last year <span>I graduated with honors from the AP university college of Antwerp as a crossmedia designer</span>.
-          <br>Currently I'm studying computer science at the Univerity of Antwerp to further understand the fundamentals of programming,
+          <br><br>Currently I'm studying computer science at the Univerity of Antwerp to further understand the fundamentals of programming,
           so I'm ready for the future as a front-end developer and all-round crossmedia designer.
         </p>
       </div>
@@ -92,10 +155,21 @@
 
     <div id="work" class="section">
       <div id="work-inner" class="section-inner">
-        <!-- <h1 class="animation-start">WORK</h1>
-        <div class="main-line main-line-start"></div> -->
-        <div id="work-main" class="animation-start">
-        </div>
+        <div id="work-main" class="animation-start"></div>
+      </div>
+    </div>
+
+    <div id="work-details" class="section">
+      <div id="work-details-inner" class="section-inner">
+        <h1 class="animation-start">CONTACT</h1>
+        <div class="main-line animation-start"></div>
+        <p class="animation-start">
+          Since I was 15 years old I'm in love with graphic design.
+          <br>First I started to teach myself the basics of photo manipulation and soon after I learned to design 2D and 3D logos.
+          I pursued my passion and last year <span>I graduated with honors from the AP university college of Antwerp as a crossmedia designer</span>.
+          <br>Currently I'm studying computer science at the Univerity of Antwerp to further understand the fundamentals of programming,
+          so I'm ready for the future as a front-end developer and all-round crossmedia designer.
+        </p>
       </div>
     </div>
 
@@ -111,6 +185,12 @@
           so I'm ready for the future as a front-end developer and all-round crossmedia designer.
         </p>
       </div>
+    </div> -->
+
+    <div id="footer">
+      <p>
+        Copyright Tijs Verellen 2018
+      </p>
     </div>
 
     <script src="script.js"></script>
