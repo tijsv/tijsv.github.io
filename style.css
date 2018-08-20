@@ -110,13 +110,6 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     position: relative; }
     #skills #skills-inner .content {
       opacity: 0; }
-    #skills #skills-inner .background-center {
-      position: absolute;
-      top: 0;
-      left: 33%;
-      height: 100%;
-      width: 33%;
-      background-color: rgba(30, 30, 30, 0.02); }
     #skills #skills-inner h1 {
       text-transform: uppercase;
       font-size: 10em;
@@ -148,10 +141,10 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         padding-bottom: 12rem; }
         #skills #skills-inner .skill-items .skill h3 {
           font-size: 1.8em;
-          font-weight: 700;
+          font-weight: 900;
           text-transform: uppercase;
-          margin-bottom: 2rem;
-          color: #1e1e1e; }
+          margin-bottom: 3rem;
+          color: #0b3954; }
         #skills #skills-inner .skill-items .skill ul {
           list-style-type: none;
           line-height: 2em;
@@ -220,7 +213,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
           bottom: 0;
           left: 0;
           right: 0;
-          background-color: rgba(20, 20, 20, 0.95);
+          background-color: rgba(30, 30, 30, 0.9);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -228,17 +221,20 @@ h1, h2, h3, h4, h5, p, ul, li, body {
           opacity: 0;
           transition: 0.3s all ease; }
           #work #work-inner #work-main .single-work .single-work-inner p {
-            color: white;
+            color: #f5f3f5;
             width: 100%;
-            padding: 20px;
+            padding: 2rem;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-transform: uppercase;
             text-align: center; }
         #work #work-inner #work-main .single-work .single-work-tag {
           position: absolute;
           width: auto;
           top: 0;
-          font-weight: 500;
+          font-weight: 700;
           padding: 1rem;
-          color: #18ce0f;
+          color: #f5f3f5;
           z-index: 2;
           background-color: #1e1e1e;
           text-transform: uppercase; }

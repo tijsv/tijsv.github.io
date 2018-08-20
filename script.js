@@ -21,7 +21,7 @@ function main() {
   var allSectionsOffset = [];
   for(i = 0; i < allSections.length; i++) {
     var array = [];
-    array.push(allSections[i].offsetTop);
+    array.push(allSections[i].offsetTop+100);
     array.push(false);
     allSectionsOffset.push(array);
   }
