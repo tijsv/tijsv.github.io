@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 }
 
 #skills {
-  background-color: $contrast;
+  background-color: $light;
   color: $dark;
   #skills-inner {
     width: 100%;
@@ -146,14 +146,22 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     .content {
       opacity: 0;
     }
+    .background-center {
+      position: absolute;
+      top: 0;
+      left: 33%;
+      height: 100%;
+      width: 33%;
+      background-color: transparentize($dark, 0.98);
+    }
     h1 {
       text-transform: uppercase;
       font-size: 10em;
       font-weight: 700;
       line-height: 1em;
-      padding: 12rem 0;
       width: 50%;
       margin: 0 auto;
+      padding-top: 12rem;
       span {
         visibility: hidden;
         transform: scaleX(0.01);
@@ -166,10 +174,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       line-height: 1.8em;
     }
     .skill-items {
-      position: absolute;
-      top: 0;
-      bottom: 0;
       width: 100%;
+      z-index: 1;
       .skill {
         height: 100%;
         width: calc(100%/3);
@@ -179,9 +185,10 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding-bottom: 12rem;
         h3 {
-          font-size: 2em;
-          font-weight: 900;
+          font-size: 1.8em;
+          font-weight: 700;
           text-transform: uppercase;
           margin-bottom: 2rem;
           color: $dark;
@@ -195,8 +202,112 @@ h1, h2, h3, h4, h5, p, ul, li, body {
           opacity: 0.9;
         }
       }
-      .darker {
-        background-color: transparentize($dark, 0.9);
+    }
+    .visible {
+      opacity: 0.9;
+      transition: 1s all ease;
+    }
+    .fade-out {
+      opacity: 0.1;
+      transition: 1s all ease;
+    }
+  }
+}
+
+#work {
+  padding: 12rem 0;
+  color: $light;
+  background-color: $dark;
+  #work-inner {
+    width: 100%;
+    .content {
+      opacity: 0;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: 10em;
+      font-weight: 700;
+      line-height: 1em;
+      width: 50%;
+      margin: 0 auto;
+      span {
+        visibility: hidden;
+        transform: scaleX(0.01);
+        letter-spacing: -100px;
+      }
+    }
+    p {
+      font-size: 0.9em;
+      font-weight: 300;
+      line-height: 1.8em;
+    }
+    #work-main {
+      width: 100vw;
+      transition: 1.2s all ease-in-out;
+      .single-work {
+        width: 17.6vw;
+        height: 17.6vw;
+        margin-top: 2vw;
+        margin-left: 2vw;
+        float: left;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        opacity: 1;
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          transform: scale(1.01);
+          transition: 0.3s all ease;
+        }
+        .single-work-inner {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: rgba(20,20,20,0.95);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+          opacity: 0;
+          transition: 0.3s all ease;
+          p {
+            color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+          }
+        }
+        .single-work-tag {
+          position: absolute;
+          width: auto;
+          top: 0;
+          font-weight: 500;
+          padding: 1rem;
+          color: $primary;
+          z-index: 2;
+          background-color: $dark;
+          text-transform: uppercase;
+        }
+      }
+      .single-work:hover {
+        img {
+          transform: scale(1.1);
+          transition: 0.3s all ease;
+        }
+        .single-work-inner {
+          opacity: 1;
+          transition: 0.3s all ease;
+        }
       }
     }
     .visible {
@@ -204,7 +315,47 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       transition: 1s all ease;
     }
     .fade-out {
-      opacity: 0.05;
+      opacity: 0.1;
+      transition: 1s all ease;
+    }
+  }
+}
+
+#contact {
+  padding: 12rem 0;
+  color: $dark;
+  background-color: $light;
+  #contact-inner {
+    width: 50%;
+    .content {
+      opacity: 0;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: 10em;
+      font-weight: 700;
+      line-height: 1em;
+      span {
+        visibility: hidden;
+        transform: scaleX(0.01);
+        letter-spacing: -100px;
+      }
+    }
+    p {
+      font-size: 0.9em;
+      font-weight: 500;
+      line-height: 2em;
+      span {
+        color: $secondary;
+        font-weight: 700;
+      }
+    }
+    .visible {
+      opacity: 0.9;
+      transition: 1s all ease;
+    }
+    .fade-out {
+      opacity: 0.1;
       transition: 1s all ease;
     }
   }
@@ -213,7 +364,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 #footer {
   background-color: $dark;
   p {
-    padding: 1rem;
+    padding: 2rem;
     margin: 0 auto;
     text-align: center;
     color: $light;

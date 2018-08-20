@@ -21,7 +21,7 @@ function main() {
   var allSectionsOffset = [];
   for(i = 0; i < allSections.length; i++) {
     var array = [];
-    array.push(allSections[i].getElementsByTagName('h1')[0].offsetTop);
+    array.push(allSections[i].offsetTop);
     array.push(false);
     allSectionsOffset.push(array);
   }
@@ -32,11 +32,11 @@ function main() {
       allSectionsOffset[i][0] = allSections[i].offsetTop;
     }
   });
-  // console.log(allSectionsOffset);
+  console.log(allSectionsOffset);
   document.getElementsByTagName('body')[0].onscroll = () => {
     for(i = 1; i < allSectionsOffset.length; i++) {
       if(window.scrollY > allSectionsOffset[i-1][0] && allSectionsOffset[i][1] == false && allSections[i]) {
-        // console.log('div passed...');
+        console.log('div passed...');
         allSectionsOffset[i][1] = true;
         var object = allSections[i].getElementsByTagName('h1')[0];
         var string = object.dataset.string.split('');
@@ -54,6 +54,8 @@ function main() {
     }
   }
 
+  createWorkGrid();
+
 }
 
 // function that writes letters
@@ -70,6 +72,76 @@ function writeLetters(index, letters, object, callback = () => {}) {
     }, delay);
   } else {
     return callback();
+  }
+}
+
+// function that creates the work divs
+function createWorkGrid() {
+  var grid = document.getElementById('work-main');
+  var allWorks = [
+    [
+      "Landingpage Zenjoy Technologies",
+      "works/landingspage.png",
+      "website + logo + video"
+    ],
+    [
+      "Van Dessel Plastics",
+      "works/vandesselplastic.png",
+      "website"
+    ],
+    [
+      "Waardevol Werk",
+      "works/waardevolwerk.png",
+      "website"
+    ],
+    [
+      "cinema.me (own project + under construction)",
+      "works/cinemame.png",
+      "website"
+    ],
+    [
+      "Subbassmentz",
+      "works/subbassmentz.png",
+      "logo + 3D"
+    ],
+    [
+      "Grietje",
+      "works/grietje.png",
+      "poster + video"
+    ],
+    [
+      "Another World",
+      "works/anotherworld.png",
+      "poster + video"
+    ],
+    [
+      "Bezorgde Berlaarse Burgers",
+      "works/bbb.png",
+      "logo"
+    ],
+    [
+      "Infographic of Electric Production",
+      "works/infographic.png",
+      "infographic"
+    ]
+  ];
+  for(i=0;i<allWorks.length;i++) {
+    var newElement = document.createElement('div');
+    var newImage = document.createElement('img');
+    var newText = document.createElement('p');
+    var newTextDiv = document.createElement('div');
+    var newTag = document.createElement('p');
+    newImage.src = allWorks[i][1];
+    newElement.className = "single-work";
+    newTextDiv.className = "single-work-inner";
+    newTag.className = "single-work-tag";
+    newText.innerHTML = allWorks[i][0];
+    newTag.innerHTML = allWorks[i][2];
+    newTextDiv.append(newText);
+    newElement.append(newTag);
+    newElement.append(newTextDiv);
+    newElement.append(newImage);
+    grid.append(newElement);
   }
 }
 
