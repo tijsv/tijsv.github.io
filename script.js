@@ -1,7 +1,7 @@
 function main() {
 
   var allSections = document.getElementsByClassName('section');
-  // home
+  // Start of experience in header
   var h2Element = document.getElementById('home-inner').children[0];
   var h2String = h2Element.dataset.string.split('');
   var h1Element = document.getElementById('home-inner').children[1];
@@ -18,6 +18,7 @@ function main() {
     }, 500);
   });
 
+  // offset of every section with boolean (revealed = true)
   var allSectionsOffset = [];
   for(i = 0; i < allSections.length; i++) {
     var array = [];
@@ -33,6 +34,7 @@ function main() {
     }
   });
   // console.log(allSectionsOffset);
+  // on scroll function to reveal div on sight
   document.getElementsByTagName('body')[0].onscroll = () => {
     for(i = 1; i < allSectionsOffset.length; i++) {
       if(window.scrollY > allSectionsOffset[i-1][0] && allSectionsOffset[i][1] == false && allSections[i]) {
@@ -102,24 +104,24 @@ function main() {
     ]
   ];
 
+  // create a grid of all works
   createWorkGrid(allWorksArray);
 
   var allWorks = document.getElementsByClassName('single-work');
   var details = document.getElementById('work-details');
   var title = details.getElementsByTagName('h4')[0];
+  // on click function for every single work
   for(i = 0; i < allWorks.length; i++) {
     allWorks[i].onclick = (e) => {
-
       // fix: i is not in scope of onclick function!!!
       var i = parseInt(e.target.dataset.index);
-
       title.dataset.string = allWorksArray[i][0];
       details.getElementsByClassName('work-img')[0].style.backgroundImage = 'url( ' + allWorksArray[i][1] + ')';
       for(j = 0; j < allWorks.length; j++) {
         allWorks[j].classList.add('grow');
       }
       setTimeout(() => {
-        colorWork(x = 0, allWorks, () => {
+        hideWorks(x = 0, allWorks, () => {
           setTimeout(() => {
             details.style.display = "block";
           }, 400);
@@ -127,6 +129,7 @@ function main() {
             writeLetters(20, index = 0, title.dataset.string.split(''), title, () => {
               details.getElementsByClassName('work-details-inner')[0].getElementsByTagName('p')[0].classList.add('visible');
               details.getElementsByClassName('work-img')[0].classList.add('visible');
+              details.getElementsByClassName('back-button')[0].classList.add('visible');
             });
           }, 450);
         })
@@ -134,14 +137,16 @@ function main() {
     }
   }
 
+  // on click function for the back button in work-details
   var backButton = document.getElementsByClassName('back-button')[0];
   backButton.onclick = () => {
     details.getElementsByClassName('work-details-inner')[0].getElementsByTagName('p')[0].classList.remove('visible');
     details.getElementsByClassName('work-img')[0].classList.remove('visible');
+    details.getElementsByClassName('back-button')[0].classList.remove('visible');
     title.innerHTML = "<span>|</span>";
     details.style.display = "none";
     setTimeout(() => {
-      reverseColorWork(i = 0, allWorks, () => {
+      revealWorks(i = 0, allWorks, () => {
         for(i = 0; i < allWorks.length; i++) {
           allWorks[i].classList.remove('grow');
         }
@@ -150,26 +155,28 @@ function main() {
   }
 }
 
-function colorWork(index, works, callback = () => {}) {
+// function that hides the works
+function hideWorks(index, works, callback = () => {}) {
   works[index].classList.add('color-work');
   var delay = 100 - index*10;
   index++
   if(index < works.length) {
     setTimeout(() => {
-      colorWork(index, works, callback);
+      hideWorks(index, works, callback);
     }, delay);
   } else {
     return callback();
   }
 }
 
-function reverseColorWork(index, works, callback = () => {}) {
+// function that reveals the works
+function revealWorks(index, works, callback = () => {}) {
   works[index].classList.remove('color-work');
   var delay = 100 - index*10;
   index++
   if(index < works.length) {
     setTimeout(() => {
-      reverseColorWork(index, works, callback);
+      revealWorks(index, works, callback);
     }, delay);
   } else {
     return callback();

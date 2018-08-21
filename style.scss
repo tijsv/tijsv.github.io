@@ -390,6 +390,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
           display: flex;
           justify-content: center;
           align-items: center;
+          opacity: 0;
           p {
             text-transform: uppercase;
             font-weight: 700;
@@ -441,7 +442,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       }
     }
     .visible {
-      opacity: 1;
+      opacity: 1 !important;
       transition: 1s all ease;
     }
     .fade-out {
