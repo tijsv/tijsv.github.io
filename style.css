@@ -9,21 +9,12 @@ body {
   background: transparent; }
 
 .clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
   visibility: hidden;
-  line-height: 0;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
   height: 0; }
-
-.clearfix {
-  display: inline-block; }
-
-html[xmlns] .clearfix {
-  display: block; }
-
-* html .clearfix {
-  height: 1%; }
 
 h1, h2, h3, h4, h5, p, ul, li, body {
   margin: 0;
@@ -192,19 +183,23 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       transition: 0.6s all ease; }
 
 #work {
-  padding: 12rem 0;
   color: #D5F2E3;
   background-color: #11151C; }
   #work #work-inner {
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    position: relative; }
     #work #work-inner .content {
       opacity: 0; }
     #work #work-inner h1 {
+      position: absolute;
       text-transform: uppercase;
       font-size: 8em;
       font-weight: 700;
       line-height: 1em;
       width: 50%;
+      left: 25%;
+      padding-top: 12rem;
       margin: 0 auto; }
       #work #work-inner h1 span {
         visibility: hidden;
@@ -272,6 +267,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
           z-index: 2;
           background-color: #11151C;
           text-transform: uppercase; }
+      #work #work-inner #work-main .single-work:last-child {
+        margin-bottom: 2rem; }
       #work #work-inner #work-main .single-work:hover img {
         transform: scale(1.1);
         transition: 0.3s all ease; }
@@ -283,51 +280,63 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         margin-top: 0;
         width: 20vw;
         height: 20vw;
-        transition: 0.6s all ease; }
+        transition: 0.6s all ease;
+        margin-bottom: 0 !important; }
       #work #work-inner #work-main .color-work .single-work-tag {
         opacity: 0;
         transition: 0.2s all ease; }
       #work #work-inner #work-main .color-work .single-work-inner {
         opacity: 1;
         background-color: #11151C;
-        transition: 0.4s all ease; }
+        transition: 0.3s all ease; }
         #work #work-inner #work-main .color-work .single-work-inner p {
           opacity: 0; }
       #work #work-inner #work-main #work-details {
         z-index: 3;
         position: absolute;
         top: 0;
-        bottom: 0;
         left: 0;
         right: 0;
+        bottom: 0;
         display: none;
         color: #D5F2E3; }
         #work #work-inner #work-main #work-details .work-details-inner {
-          width: 80%;
+          width: 90%;
+          height: 100%;
           margin: 0 auto;
-          padding: 4rem 0;
           display: flex;
           justify-content: space-between;
           align-items: center;
           flex-direction: row; }
           #work #work-inner #work-main #work-details .work-details-inner .text {
-            width: 50%; }
+            width: 40%;
+            margin: 0 auto; }
             #work #work-inner #work-main #work-details .work-details-inner .text h4 {
               text-transform: uppercase;
               font-size: 2em;
               font-weight: 700;
-              line-height: 1em;
+              line-height: 1.2em;
               margin-bottom: 1rem; }
               #work #work-inner #work-main #work-details .work-details-inner .text h4 span {
                 visibility: hidden;
                 transform: scaleX(0.01);
                 letter-spacing: -100px; }
+            #work #work-inner #work-main #work-details .work-details-inner .text p {
+              font-size: 0.9em;
+              font-weight: 300;
+              line-height: 1.8em; }
+          #work #work-inner #work-main #work-details .work-details-inner .work-img {
+            height: 80%;
+            width: 40%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; }
     #work #work-inner .visible {
-      opacity: 0.9;
+      opacity: 1;
       transition: 1s all ease; }
     #work #work-inner .fade-out {
-      opacity: 0.1;
-      transition: 1s all ease; }
+      opacity: 0;
+      transition: 0.6s all ease; }
 
 #contact {
   padding: 12rem 0;

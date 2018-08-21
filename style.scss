@@ -22,24 +22,12 @@ body {
 }
 
 .clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
   visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-.clearfix {
-  display: inline-block;
-}
-
-html[xmlns] .clearfix {
   display: block;
-}
-
-* html .clearfix {
-  height: 1%;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 
 h1, h2, h3, h4, h5, p, ul, li, body {
@@ -250,20 +238,25 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 }
 
 #work {
-  padding: 12rem 0;
+  // padding-bottom: 2rem;
   color: $light;
   background-color: $dark;
   #work-inner {
     width: 100%;
+    height: 100%;
+    position: relative;
     .content {
       opacity: 0;
     }
     h1 {
+      position: absolute;
       text-transform: uppercase;
       font-size: 8em;
       font-weight: 700;
       line-height: 1em;
       width: 50%;
+      left: 25%;
+      padding-top: 12rem;
       margin: 0 auto;
       span {
         visibility: hidden;
@@ -339,6 +332,9 @@ h1, h2, h3, h4, h5, p, ul, li, body {
           text-transform: uppercase;
         }
       }
+      .single-work:last-child {
+        margin-bottom: 2rem;
+      }
       .single-work:hover {
         img {
           transform: scale(1.1);
@@ -355,6 +351,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         width: 20vw;
         height: 20vw;
         transition: 0.6s all ease;
+        margin-bottom: 0 !important;
       }
       .color-work {
         .single-work-tag {
@@ -364,7 +361,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         .single-work-inner {
           opacity: 1;
           background-color: $dark;
-          transition: 0.4s all ease;
+          transition: 0.3s all ease;
           p {
             opacity: 0;
           }
@@ -372,29 +369,29 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       }
       #work-details {
         z-index: 3;
-        // background-color: $dark;
         position: absolute;
         top: 0;
-        bottom: 0;
         left: 0;
         right: 0;
+        bottom: 0;
         display: none;
         color: $light;
         .work-details-inner {
-          width: 80%;
+          width: 90%;
+          height: 100%;
           margin: 0 auto;
-          padding: 4rem 0;
           display: flex;
           justify-content: space-between;
           align-items: center;
           flex-direction: row;
           .text {
-            width: 50%;
+            width: 40%;
+            margin: 0 auto;
             h4 {
               text-transform: uppercase;
               font-size: 2em;
               font-weight: 700;
-              line-height: 1em;
+              line-height: 1.2em;
               margin-bottom: 1rem;
               span {
                 visibility: hidden;
@@ -402,17 +399,29 @@ h1, h2, h3, h4, h5, p, ul, li, body {
                 letter-spacing: -100px;
               }
             }
+            p {
+              font-size: 0.9em;
+              font-weight: 300;
+              line-height: 1.8em;
+            }
+          }
+          .work-img {
+            height: 80%;
+            width: 40%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
           }
         }
       }
     }
     .visible {
-      opacity: 0.9;
+      opacity: 1;
       transition: 1s all ease;
     }
     .fade-out {
-      opacity: 0.1;
-      transition: 1s all ease;
+      opacity: 0;
+      transition: 0.6s all ease;
     }
   }
 }
