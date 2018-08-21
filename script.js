@@ -54,31 +54,7 @@ function main() {
     }
   }
 
-  createWorkGrid();
-
-}
-
-// function that writes letters
-function writeLetters(index, letters, object, callback = () => {}) {
-  object.innerHTML += letters[index];
-  var delay = Math.floor(Math.random() * 40) + 40;
-  if(letters[index] === ",") {
-    delay = 600;
-  }
-  index++;
-  if(index < letters.length) {
-    setTimeout(() => {
-      writeLetters(index, letters, object, callback);
-    }, delay);
-  } else {
-    return callback();
-  }
-}
-
-// function that creates the work divs
-function createWorkGrid() {
-  var grid = document.getElementById('work-main');
-  var allWorks = [
+  var allWorksArray = [
     [
       "Landingpage Zenjoy Technologies",
       "works/landingspage.png",
@@ -125,6 +101,73 @@ function createWorkGrid() {
       "infographic"
     ]
   ];
+
+  createWorkGrid(allWorksArray);
+
+  var allWorks = document.getElementsByClassName('single-work');
+  var details = document.getElementById('work-details');
+  for(i = 0; i < allWorks.length; i++) {
+    allWorks[i].onclick = () => {
+
+      // i zit niet in de scope van de noclick function!!!!!!!
+
+      var title = details.getElementsByTagName('h4')[0];
+      title.dataset.string = allWorksArray[i][0];
+      details.getElementsByTagName('img')[0].src = allWorksArray[i][1];
+      for(j = 0; j < allWorks.length; j++) {
+        allWorks[j].classList.add('grow');
+      }
+      setTimeout(() => {
+        colorWork(x = 0, allWorks, () => {
+          setTimeout(() => {
+            details.style.display = "block";
+          }, 200);
+          setTimeout(() => {
+            writeLetters(index = 0, title.dataset.string.split(''), title, () => {
+              details.getElementsByClassName('work-details-inner')[0].classList.add('visible');
+            });
+          }, 250);
+        })
+      }, 600);
+    }
+  }
+
+}
+
+function colorWork(index, works, callback = () => {}) {
+  works[index].classList.add('color-work');
+  var delay = 200 - index*15;
+  index++
+  if(index < works.length) {
+    setTimeout(() => {
+      colorWork(index, works, callback);
+    }, delay);
+  } else {
+    return callback();
+  }
+}
+
+// function that writes letters
+function writeLetters(index, letters, object, callback = () => {}) {
+  object.innerHTML += letters[index];
+  var delay = Math.floor(Math.random() * 40) + 40;
+  if(letters[index] === ",") {
+    delay = 600;
+  }
+  index++;
+  if(index < letters.length) {
+    setTimeout(() => {
+      writeLetters(index, letters, object, callback);
+    }, delay);
+  } else {
+    return callback();
+  }
+}
+
+// function that creates the work divs
+function createWorkGrid(allWorksArray) {
+  var grid = document.getElementById('work-main');
+  var allWorks = allWorksArray;
   for(i=0;i<allWorks.length;i++) {
     var newElement = document.createElement('div');
     var newImage = document.createElement('img');
@@ -133,6 +176,7 @@ function createWorkGrid() {
     var newTag = document.createElement('p');
     newImage.src = allWorks[i][1];
     newElement.className = "single-work";
+    newElement.dataset.index = i;
     newTextDiv.className = "single-work-inner";
     newTag.className = "single-work-tag";
     newText.innerHTML = allWorks[i][0];

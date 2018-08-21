@@ -1,22 +1,45 @@
 // scss to css: sass --sourcemap=none --watch style.scss:style.css
 
-// https://coolors.co/1e1e1e-18ce0f-0b3954-bfd7ea-f5f3f5
+// https://coolors.co/18ce0f-071e22-d5f2e3-11151c-6e0d25
 
-$dark: #1e1e1e;
-$light: #f5f3f5;
+$dark: #11151C; //rgb(17,21,28)
+$light: #D5F2E3;
 $primary: #18ce0f;
-$secondary: #0b3954;
-$contrast: #bfd7ea;
+$secondary: #071E22; //rgb(7,30,34)
+$contrast: #ce3c0f;
+$other: #ce0f78;
 
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: $light;
   overflow-x: hidden;
+  font-size: 0.95em;
 }
 
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
 }
 
 h1, h2, h3, h4, h5, p, ul, li, body {
@@ -38,7 +61,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left top, rgba(0,0,0,0.75) 0%, rgba(67,67,67,0.75) 100%);
+    background: linear-gradient(to left top, rgba(17,21,28,0.75) 0%, rgba(7,30,34,0.75) 100%);
     z-index: 0;
   }
   .background {
@@ -81,8 +104,13 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       line-height: 1.8em;
       opacity: 0;
       span {
-        color: #18ce0f;
+        color: $contrast;
+        background-color: $dark;
+        padding: 0.2rem 0;
         font-weight: 700;
+      }
+      .color2 {
+        color: $primary;
       }
     }
     .visible {
@@ -100,7 +128,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 #story {
   padding: 12rem 0;
   color: $light;
-  background-color: $dark;
+  background-color: $secondary;
   #story-inner {
     width: 50%;
     .content {
@@ -108,7 +136,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     }
     h1 {
       text-transform: uppercase;
-      font-size: 10em;
+      font-size: 8em;
       font-weight: 700;
       line-height: 1em;
       span {
@@ -123,11 +151,13 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       line-height: 2em;
       span {
         color: $primary;
+        background-color: $dark;
+        padding: 0.2rem 0;
         font-weight: 700;
       }
     }
     .visible {
-      opacity: 0.9;
+      opacity: 1;
       transition: 1s all ease;
     }
     .fade-out {
@@ -146,22 +176,16 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     .content {
       opacity: 0;
     }
-    // .background-center {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 33%;
-    //   height: 100%;
-    //   width: 33%;
-    //   background-color: transparentize($dark, 0.98);
-    // }
     h1 {
+      position: absolute;
       text-transform: uppercase;
-      font-size: 10em;
+      font-size: 8em;
       font-weight: 700;
       line-height: 1em;
-      text-align: center;
-      margin: 0 auto;
+      width: 50%;
+      left: 25%;
       padding-top: 12rem;
+      margin: 0 auto;
       span {
         visibility: hidden;
         transform: scaleX(0.01);
@@ -185,31 +209,42 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-bottom: 12rem;
+        padding: 12rem 0;
         h3 {
-          font-size: 1.8em;
-          font-weight: 900;
+          font-size: 1.6em;
+          font-weight: 700;
           text-transform: uppercase;
+          padding: 0.5rem;
+          background-color: $dark;
           margin-bottom: 3rem;
-          color: $secondary;
+          color: $contrast;
         }
         ul {
           list-style-type: none;
           line-height: 2em;
-          font-weight: 500;
+          font-weight: 400;
           font-size: 1em;
-          color: $dark;
-          opacity: 0.9;
+        }
+      }
+      .darker {
+        background-color: transparentize($secondary, 0.95);;
+        h3 {
+          color: $primary;
+        }
+      }
+      .othercolor {
+        h3 {
+          color: $other;
         }
       }
     }
     .visible {
-      opacity: 0.9;
-      transition: 1s all ease;
+      opacity: 1;
+      transition: 0.6s all ease;
     }
     .fade-out {
-      opacity: 0.1;
-      transition: 1s all ease;
+      opacity: 0;
+      transition: 0.6s all ease;
     }
   }
 }
@@ -225,10 +260,10 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     }
     h1 {
       text-transform: uppercase;
-      font-size: 10em;
+      font-size: 8em;
       font-weight: 700;
       line-height: 1em;
-      text-align: center;
+      width: 50%;
       margin: 0 auto;
       span {
         visibility: hidden;
@@ -243,6 +278,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     }
     #work-main {
       width: 100vw;
+      position: relative;
       transition: 1.2s all ease-in-out;
       .single-work {
         width: 17.6vw;
@@ -273,7 +309,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
           bottom: 0;
           left: 0;
           right: 0;
-          background-color: rgba(30,30,30,0.90);
+          background-color: transparentize($dark, 0.1);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -295,7 +331,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
           width: auto;
           top: 0;
           font-weight: 700;
-          padding: 1rem;
+          padding: 0.5rem;
+          margin: 0.5rem;
           color: $light;
           z-index: 2;
           background-color: $dark;
@@ -310,6 +347,62 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         .single-work-inner {
           opacity: 1;
           transition: 0.3s all ease;
+        }
+      }
+      .grow {
+        margin-left: 0;
+        margin-top: 0;
+        width: 20vw;
+        height: 20vw;
+        transition: 0.6s all ease;
+      }
+      .color-work {
+        .single-work-tag {
+          opacity: 0;
+          transition: 0.2s all ease;
+        }
+        .single-work-inner {
+          opacity: 1;
+          background-color: $dark;
+          transition: 0.4s all ease;
+          p {
+            opacity: 0;
+          }
+        }
+      }
+      #work-details {
+        z-index: 3;
+        // background-color: $dark;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: none;
+        color: $light;
+        .work-details-inner {
+          width: 80%;
+          margin: 0 auto;
+          padding: 4rem 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row;
+          .text {
+            width: 50%;
+            h4 {
+              text-transform: uppercase;
+              font-size: 2em;
+              font-weight: 700;
+              line-height: 1em;
+              margin-bottom: 1rem;
+              span {
+                visibility: hidden;
+                transform: scaleX(0.01);
+                letter-spacing: -100px;
+              }
+            }
+          }
         }
       }
     }
@@ -335,7 +428,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     }
     h1 {
       text-transform: uppercase;
-      font-size: 10em;
+      font-size: 8em;
       font-weight: 700;
       line-height: 1em;
       span {
@@ -349,7 +442,9 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       font-weight: 500;
       line-height: 2em;
       span {
-        color: $secondary;
+        color: $contrast;
+        background-color: transparentize($dark, 0.9);
+        padding: 0.2rem 0;
         font-weight: 700;
       }
     }
