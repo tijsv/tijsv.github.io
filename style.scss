@@ -238,7 +238,6 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 }
 
 #work {
-  // padding-bottom: 2rem;
   color: $light;
   background-color: $dark;
   #work-inner {
@@ -283,6 +282,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         cursor: pointer;
         overflow: hidden;
         opacity: 1;
+        transition: 0.4s all ease;
         img {
           position: absolute;
           width: 100%;
@@ -330,6 +330,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
           z-index: 2;
           background-color: $dark;
           text-transform: uppercase;
+          transition: 0.2s all ease;
         }
       }
       .single-work:last-child {
@@ -350,7 +351,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         margin-top: 0;
         width: 20vw;
         height: 20vw;
-        transition: 0.6s all ease;
+        transition: 0.4s all ease;
         margin-bottom: 0 !important;
       }
       .color-work {
@@ -376,6 +377,29 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         bottom: 0;
         display: none;
         color: $light;
+        .back-button {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          z-index: 10;
+          cursor: pointer;
+          background-color: $contrast;
+          transition: 0.2s all ease;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.2em;
+          }
+        }
+        .back-button:hover {
+          background-color: lighten($contrast, 15%);
+          transition: 0.2s all ease;
+        }
         .work-details-inner {
           width: 90%;
           height: 100%;
@@ -400,6 +424,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
               }
             }
             p {
+              color: $light;
               font-size: 0.9em;
               font-weight: 300;
               line-height: 1.8em;

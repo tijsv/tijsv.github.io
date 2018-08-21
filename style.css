@@ -222,7 +222,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         position: relative;
         cursor: pointer;
         overflow: hidden;
-        opacity: 1; }
+        opacity: 1;
+        transition: 0.4s all ease; }
         #work #work-inner #work-main .single-work img {
           position: absolute;
           width: 100%;
@@ -266,7 +267,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
           color: #D5F2E3;
           z-index: 2;
           background-color: #11151C;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          transition: 0.2s all ease; }
       #work #work-inner #work-main .single-work:last-child {
         margin-bottom: 2rem; }
       #work #work-inner #work-main .single-work:hover img {
@@ -280,7 +282,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         margin-top: 0;
         width: 20vw;
         height: 20vw;
-        transition: 0.6s all ease;
+        transition: 0.4s all ease;
         margin-bottom: 0 !important; }
       #work #work-inner #work-main .color-work .single-work-tag {
         opacity: 0;
@@ -300,6 +302,26 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         bottom: 0;
         display: none;
         color: #D5F2E3; }
+        #work #work-inner #work-main #work-details .back-button {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          z-index: 10;
+          cursor: pointer;
+          background-color: #ce3c0f;
+          transition: 0.2s all ease;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          #work #work-inner #work-main #work-details .back-button p {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.2em; }
+        #work #work-inner #work-main #work-details .back-button:hover {
+          background-color: #f16439;
+          transition: 0.2s all ease; }
         #work #work-inner #work-main #work-details .work-details-inner {
           width: 90%;
           height: 100%;
@@ -322,6 +344,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
                 transform: scaleX(0.01);
                 letter-spacing: -100px; }
             #work #work-inner #work-main #work-details .work-details-inner .text p {
+              color: #D5F2E3;
               font-size: 0.9em;
               font-weight: 300;
               line-height: 1.8em; }

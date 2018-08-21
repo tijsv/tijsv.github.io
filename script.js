@@ -7,9 +7,9 @@ function main() {
   var h1Element = document.getElementById('home-inner').children[1];
   var h1String = h1Element.dataset.string.split('');
   var pElement = document.getElementById('home-inner').children[2];
-  writeLetters(i = 0, h2String, h2Element, () => {
+  writeLetters(30, i = 0, h2String, h2Element, () => {
     setTimeout(() => {
-      writeLetters(i = 0, h1String, h1Element, () => {
+      writeLetters(60, i = 0, h1String, h1Element, () => {
         setTimeout(() => {
           pElement.classList.add('visible');
           h2Element.classList.add('fade-up');
@@ -42,13 +42,13 @@ function main() {
         var string = object.dataset.string.split('');
         var rest = allSections[i].getElementsByClassName('content')[0];
         setTimeout(() => {
-          writeLetters(i = 0, string, object, () => {
+          writeLetters(40, i = 0, string, object, () => {
             setTimeout(() => {
               rest.classList.add('visible');
               object.classList.add('fade-out');
             }, 500);
           });
-        }, 500);
+        }, 250);
         break;
       }
     }
@@ -106,13 +106,13 @@ function main() {
 
   var allWorks = document.getElementsByClassName('single-work');
   var details = document.getElementById('work-details');
+  var title = details.getElementsByTagName('h4')[0];
   for(i = 0; i < allWorks.length; i++) {
     allWorks[i].onclick = (e) => {
 
-      // i zit niet in de scope van de noclick function!!!!!!!
+      // fix: i is not in scope of onclick function!!!
       var i = parseInt(e.target.dataset.index);
 
-      var title = details.getElementsByTagName('h4')[0];
       title.dataset.string = allWorksArray[i][0];
       details.getElementsByClassName('work-img')[0].style.backgroundImage = 'url( ' + allWorksArray[i][1] + ')';
       for(j = 0; j < allWorks.length; j++) {
@@ -124,21 +124,35 @@ function main() {
             details.style.display = "block";
           }, 400);
           setTimeout(() => {
-            writeLetters(index = 0, title.dataset.string.split(''), title, () => {
-              details.getElementsByTagName('p')[0].classList.add('visible');
+            writeLetters(20, index = 0, title.dataset.string.split(''), title, () => {
+              details.getElementsByClassName('work-details-inner')[0].getElementsByTagName('p')[0].classList.add('visible');
               details.getElementsByClassName('work-img')[0].classList.add('visible');
             });
           }, 450);
         })
-      }, 600);
+      }, 450);
     }
   }
 
+  var backButton = document.getElementsByClassName('back-button')[0];
+  backButton.onclick = () => {
+    details.getElementsByClassName('work-details-inner')[0].getElementsByTagName('p')[0].classList.remove('visible');
+    details.getElementsByClassName('work-img')[0].classList.remove('visible');
+    title.innerHTML = "<span>|</span>";
+    details.style.display = "none";
+    setTimeout(() => {
+      reverseColorWork(i = 0, allWorks, () => {
+        for(i = 0; i < allWorks.length; i++) {
+          allWorks[i].classList.remove('grow');
+        }
+      })
+    }, 200);
+  }
 }
 
 function colorWork(index, works, callback = () => {}) {
   works[index].classList.add('color-work');
-  var delay = 150 - index*15;
+  var delay = 100 - index*10;
   index++
   if(index < works.length) {
     setTimeout(() => {
@@ -149,17 +163,30 @@ function colorWork(index, works, callback = () => {}) {
   }
 }
 
+function reverseColorWork(index, works, callback = () => {}) {
+  works[index].classList.remove('color-work');
+  var delay = 100 - index*10;
+  index++
+  if(index < works.length) {
+    setTimeout(() => {
+      reverseColorWork(index, works, callback);
+    }, delay);
+  } else {
+    return callback();
+  }
+}
+
 // function that writes letters
-function writeLetters(index, letters, object, callback = () => {}) {
+function writeLetters(speed, index, letters, object, callback = () => {}) {
   object.innerHTML += letters[index];
-  var delay = Math.floor(Math.random() * 40) + 40;
+  var delay = Math.floor(Math.random() * speed) + speed;
   if(letters[index] === ",") {
     delay = 600;
   }
   index++;
   if(index < letters.length) {
     setTimeout(() => {
-      writeLetters(index, letters, object, callback);
+      writeLetters(speed, index, letters, object, callback);
     }, delay);
   } else {
     return callback();
