@@ -413,6 +413,9 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     height: 25vw; } }
 /* Large desktop */
 @media (max-width: 1200px) {
+  #work #work-inner h1 {
+    width: 70%;
+    left: 15%; }
   #work #work-inner #work-main .single-work {
     width: 29.33333333vw;
     height: 29.33333333vw;
@@ -426,6 +429,10 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 
   #story #story-inner {
     width: 70%; }
+
+  #skills #skills-inner h1 {
+    width: 70%;
+    left: 15%; }
 
   #contact #contact-inner {
     width: 70%; } }
@@ -456,6 +463,14 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   #story #story-inner {
     width: 80%; }
 
+  #skills #skills-inner h1 {
+    width: 80%;
+    left: 10%; }
+
+  #work #work-inner h1 {
+    width: 80%;
+    left: 10%; }
+
   #contact #contact-inner {
     width: 80%; } }
 /* Landscape phone to portrait tablet */
@@ -472,9 +487,18 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       #story #story-inner h1 {
         font-size: 4em; }
 
+  #skills #skills-inner h1 {
+    width: 90%;
+    left: 5%;
+    padding-top: 6rem; }
   #skills #skills-inner .skill-items .skill {
     width: 100%;
     padding: 6rem 0; }
+
+  #work #work-inner h1 {
+    width: 90%;
+    left: 5%;
+    padding-top: 6rem; }
 
   #contact {
     padding: 6rem 0; }
@@ -495,6 +519,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   #story #story-inner h1 {
     font-size: 3em; }
 
+  #skills #skills-inner h1 {
+    font-size: 3em; }
+
+  #work #work-inner h1 {
+    font-size: 3em; }
   #work #work-inner #work-main .single-work {
     width: 90vw;
     height: 90vw;

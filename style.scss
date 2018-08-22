@@ -527,6 +527,10 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 @media (max-width: 1200px) {
   #work {
     #work-inner {
+      h1 {
+        width: 70%;
+        left: 15%;
+      }
       #work-main {
         .single-work {
           width: 29.33333333vw;
@@ -546,6 +550,14 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   #story {
     #story-inner {
       width: 70%;
+    }
+  }
+  #skills {
+    #skills-inner {
+      h1 {
+        width: 70%;
+        left: 15%;
+      }
     }
   }
   #contact {
@@ -599,6 +611,22 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       width: 80%;
     }
   }
+  #skills {
+    #skills-inner {
+      h1 {
+        width: 80%;
+        left: 10%;
+      }
+    }
+  }
+  #work {
+    #work-inner {
+      h1 {
+        width: 80%;
+        left: 10%;
+      }
+    }
+  }
   #contact {
     #contact-inner {
       width: 80%;
@@ -629,11 +657,25 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   }
   #skills {
     #skills-inner {
+      h1 {
+        width: 90%;
+        left: 5%;
+        padding-top: 6rem;
+      }
       .skill-items {
         .skill {
           width: 100%;
           padding: 6rem 0;
         }
+      }
+    }
+  }
+  #work {
+    #work-inner {
+      h1 {
+        width: 90%;
+        left: 5%;
+        padding-top: 6rem;
       }
     }
   }
@@ -673,8 +715,18 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       }
     }
   }
+  #skills {
+    #skills-inner {
+      h1 {
+        font-size: 3em;
+      }
+    }
+  }
   #work {
     #work-inner {
+      h1 {
+        font-size: 3em;
+      }
       #work-main {
         .single-work {
           width: 90vw;
