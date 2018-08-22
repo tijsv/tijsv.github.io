@@ -47,7 +47,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     z-index: -1; }
   #home #home-inner {
     color: #D5F2E3;
-    z-index: 1; }
+    z-index: 1;
+    padding: 0 10%; }
     #home #home-inner h1 {
       text-transform: uppercase;
       font-size: 4em;
@@ -94,7 +95,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       opacity: 0; }
     #story #story-inner h1 {
       text-transform: uppercase;
-      font-size: 8em;
+      font-size: 6em;
       font-weight: 700;
       line-height: 1em; }
       #story #story-inner h1 span {
@@ -128,7 +129,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     #skills #skills-inner h1 {
       position: absolute;
       text-transform: uppercase;
-      font-size: 8em;
+      font-size: 6em;
       font-weight: 700;
       line-height: 1em;
       width: 50%;
@@ -194,7 +195,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     #work #work-inner h1 {
       position: absolute;
       text-transform: uppercase;
-      font-size: 8em;
+      font-size: 6em;
       font-weight: 700;
       line-height: 1em;
       width: 50%;
@@ -350,8 +351,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
               font-weight: 300;
               line-height: 1.8em; }
           #work #work-inner #work-main #work-details .work-details-inner .work-img {
-            height: 80%;
-            width: 40%;
+            height: 40vw;
+            width: 40vw;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover; }
@@ -372,7 +373,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       opacity: 0; }
     #contact #contact-inner h1 {
       text-transform: uppercase;
-      font-size: 8em;
+      font-size: 6em;
       font-weight: 700;
       line-height: 1em; }
       #contact #contact-inner h1 span {
@@ -402,3 +403,120 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     margin: 0 auto;
     text-align: center;
     color: #D5F2E3; }
+
+@media (max-width: 1440px) {
+  #work #work-inner #work-main .single-work {
+    width: 22.5vw;
+    height: 22.5vw; }
+  #work #work-inner #work-main .grow {
+    width: 25vw;
+    height: 25vw; } }
+/* Large desktop */
+@media (max-width: 1200px) {
+  #work #work-inner #work-main .single-work {
+    width: 29.33333333vw;
+    height: 29.33333333vw;
+    margin-top: 3vw;
+    margin-left: 3vw; }
+  #work #work-inner #work-main .grow {
+    width: calc(100vw/3);
+    height: calc(100vw/3);
+    margin-top: 0;
+    margin-left: 0; }
+
+  #story #story-inner {
+    width: 70%; }
+
+  #contact #contact-inner {
+    width: 70%; } }
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 480px) and (max-width: 979px) {
+  #work #work-inner #work-main .single-work {
+    width: 42.5vw;
+    height: 42.5vw;
+    margin-top: 5vw;
+    margin-left: 5vw; }
+  #work #work-inner #work-main .grow {
+    width: 50vw;
+    height: 50vw;
+    margin-top: 0;
+    margin-left: 0; }
+  #work #work-inner #work-main #work-details .work-details-inner {
+    flex-direction: column;
+    justify-content: center;
+    max-height: 100%; }
+    #work #work-inner #work-main #work-details .work-details-inner .work-img {
+      width: 70vw;
+      height: 70vw; }
+    #work #work-inner #work-main #work-details .work-details-inner .text {
+      width: 70vw;
+      margin-bottom: 6rem; } }
+/* Landscape phone to portrait tablet */
+@media (max-width: 979px) {
+  #story #story-inner {
+    width: 80%; }
+
+  #contact #contact-inner {
+    width: 80%; } }
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  #home #home-inner h2 {
+    font-size: 1em; }
+  #home #home-inner h1 {
+    font-size: 3em; }
+
+  #story {
+    padding: 6rem 0; }
+    #story #story-inner {
+      width: 90%; }
+      #story #story-inner h1 {
+        font-size: 4em; }
+
+  #skills #skills-inner .skill-items .skill {
+    width: 100%;
+    padding: 6rem 0; }
+
+  #contact {
+    padding: 6rem 0; }
+    #contact #contact-inner {
+      width: 90%; }
+      #contact #contact-inner h1 {
+        font-size: 4em; } }
+@media (min-width: 480px) and (max-width: 600px) {
+  #work #work-inner #work-main .single-work .single-work-tag {
+    font-size: 0.8em; } }
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  #home #home-inner h2 {
+    font-size: 1em; }
+  #home #home-inner h1 {
+    font-size: 2em; }
+
+  #story #story-inner h1 {
+    font-size: 3em; }
+
+  #work #work-inner #work-main .single-work {
+    width: 90vw;
+    height: 90vw;
+    margin-top: 5vw;
+    margin-left: 5vw; }
+  #work #work-inner #work-main .grow {
+    width: 100vw;
+    height: 100vw;
+    margin-top: 0;
+    margin-left: 0; }
+  #work #work-inner #work-main #work-details .work-details-inner {
+    flex-direction: column;
+    justify-content: center;
+    max-height: 100%; }
+    #work #work-inner #work-main #work-details .work-details-inner .work-img {
+      width: 90vw;
+      height: 90vw; }
+    #work #work-inner #work-main #work-details .work-details-inner .text {
+      width: 90vw;
+      margin-bottom: 6rem; }
+
+  #contact #contact-inner {
+    width: 90%; }
+    #contact #contact-inner h1 {
+      font-size: 3em; } }

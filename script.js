@@ -124,6 +124,26 @@ function main() {
         hideWorks(x = 0, allWorks, () => {
           setTimeout(() => {
             details.style.display = "block";
+            // fix for bad display lower than 980 height
+            if(767 < window.innerWidth && window.innerWidth < 980 && allWorks.length > 6) {
+              console.log(window.innerWidth, 'all works with index higher than', 5, ' need to get display none for good display..');
+              for(i = 5; i < allWorks.length; i++) {
+                allWorks[i].style.display = "none";
+              }
+              title.scrollIntoView();
+            } else if(480 < window.innerWidth && window.innerWidth < 768 && allWorks.length > 8) {
+              console.log(window.innerWidth, 'all works with index higher than', 7, ' need to get display none for good display..');
+              for(i = 7; i < allWorks.length; i++) {
+                allWorks[i].style.display = "none";
+              }
+              title.scrollIntoView();
+            } else if(window.innerWidth < 481 && allWorks.length > 4) {
+              console.log(window.innerWidth, 'all works with index higher than', 3, ' need to get display none for good display..');
+              for(i = 3; i < allWorks.length; i++) {
+                allWorks[i].style.display = "none";
+              }
+              title.scrollIntoView();
+            }
           }, 400);
           setTimeout(() => {
             writeLetters(20, index = 0, title.dataset.string.split(''), title, () => {
@@ -145,6 +165,12 @@ function main() {
     details.getElementsByClassName('back-button')[0].classList.remove('visible');
     title.innerHTML = "<span>|</span>";
     details.style.display = "none";
+    // revert for fix for bad display between 480 and 980 height
+    for(i = 0; i < allWorks.length; i++) {
+      if(allWorks[i].style.display === "none") {
+        allWorks[i].style.display = "block";
+      }
+    }
     setTimeout(() => {
       revealWorks(i = 0, allWorks, () => {
         for(i = 0; i < allWorks.length; i++) {
@@ -153,6 +179,7 @@ function main() {
       })
     }, 200);
   }
+
 }
 
 // function that hides the works
