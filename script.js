@@ -1,5 +1,19 @@
 function main() {
 
+  // navigation animations
+  var menuWrapper = document.getElementById('menu-icon-wrapper');
+  var menuIcon = document.getElementById('menu-icon');
+  var navigation = document.getElementById('navigation');
+  menuWrapper.onclick = () => {
+    if(!menuIcon.classList.contains('clicked')) {
+      menuIcon.classList.add('clicked');
+      navigation.classList.add('reveal-nav');
+    } else {
+      menuIcon.classList.remove('clicked');
+      navigation.classList.remove('reveal-nav');
+    }
+  }
+
   var allSections = document.getElementsByClassName('section');
   // Start of experience in header
   var h2Element = document.getElementById('home-inner').children[0];
@@ -8,14 +22,12 @@ function main() {
   var h1String = h1Element.dataset.string.split('');
   var pElement = document.getElementById('home-inner').children[2];
   writeLetters(30, i = 0, h2String, h2Element, () => {
-    setTimeout(() => {
-      writeLetters(60, i = 0, h1String, h1Element, () => {
-        setTimeout(() => {
-          pElement.classList.add('visible');
-          h2Element.classList.add('fade-up');
-        }, 500);
-      });
-    }, 500);
+    writeLetters(40, i = 0, h1String, h1Element, () => {
+      setTimeout(() => {
+        pElement.classList.add('visible');
+        h2Element.classList.add('fade-up');
+      }, 500);
+    });
   });
 
   // offset of every section with boolean (revealed = true)
@@ -48,7 +60,7 @@ function main() {
             setTimeout(() => {
               rest.classList.add('visible');
               object.classList.add('fade-out');
-            }, 500);
+            }, 250);
           });
         }, 250);
         break;
@@ -60,37 +72,37 @@ function main() {
     [
       "Landingpage Zenjoy Technologies",
       "works/landingspage.png",
-      "website + logo + video"
+      "front-end & logo & video"
     ],
     [
       "Van Dessel Plastics",
       "works/vandesselplastic.png",
-      "website"
+      "front-end"
     ],
     [
       "Waardevol Werk",
       "works/waardevolwerk.png",
-      "website"
+      "front-end"
     ],
     [
-      "cinema.me (own project + under construction)",
+      "cinema.me (own project & under construction)",
       "works/cinemame.png",
-      "website"
+      "front-end & back-end"
     ],
     [
       "Subbassmentz",
       "works/subbassmentz.png",
-      "logo + 3D"
+      "logo & 3D"
     ],
     [
       "Grietje",
       "works/grietje.png",
-      "poster + video"
+      "poster & video"
     ],
     [
       "Another World",
       "works/anotherworld.png",
-      "poster + video"
+      "poster & video"
     ],
     [
       "Bezorgde Berlaarse Burgers",
@@ -180,6 +192,16 @@ function main() {
     }, 200);
   }
 
+}
+
+// function that handles the navigation scrollY
+function navigationScroll(id) {
+  var menuIcon = document.getElementById('menu-icon');
+  var navigation = document.getElementById('navigation');
+  var div = document.getElementById(id);
+  div.scrollIntoView({behavior: 'smooth'});
+  menuIcon.classList.remove('clicked');
+  navigation.classList.remove('reveal-nav');
 }
 
 // function that hides the works
