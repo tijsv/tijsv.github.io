@@ -575,6 +575,13 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     font-size: 0.8em; } }
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  #navigation {
+    right: 480px;
+    align-items: center; }
+
+  .reveal-nav {
+    right: 0.5rem !important; }
+
   #home #home-inner h2 {
     font-size: 1em; }
   #home #home-inner h1 {
