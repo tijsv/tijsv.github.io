@@ -454,14 +454,15 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         border: none;
         background-color: white;
         border-radius: 0;
-        font-family: 'Montserrat', sans-serif; }
+        font-family: 'Montserrat', sans-serif;
+        box-sizing: border-box; }
       #contact #contact-inner form ::placeholder {
         font-family: 'Montserrat', sans-serif;
         color: #11151C; }
       #contact #contact-inner form textarea {
         resize: none; }
       #contact #contact-inner form .form-input {
-        width: 90%;
+        width: 100%;
         padding: 1rem;
         margin-bottom: 2rem; }
       #contact #contact-inner form .form-submit {

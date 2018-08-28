@@ -562,6 +562,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         background-color: white;
         border-radius: 0;
         font-family: 'Montserrat', sans-serif;
+        box-sizing : border-box;
       }
       ::placeholder {
         font-family: 'Montserrat', sans-serif;
@@ -571,7 +572,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         resize: none;
       }
       .form-input {
-        width: 90%;
+        width: 100%;
         padding: 1rem;
         margin-bottom: 2rem;
       }
