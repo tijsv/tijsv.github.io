@@ -123,13 +123,17 @@
     <div id="contact" class="section">
       <div id="contact-inner">
         <h1 data-string="contact"><span>|</span></h1>
-        <p class="content">
-          Since I was 15 years old I'm in love with graphic design.
-          <br>First I started to teach myself the basics of photo manipulation and soon after I learned to design 2D and 3D logos.
-          I pursued my passion and last year <span>I graduated with honors from the AP university college of Antwerp as a crossmedia designer</span>.
-          <br>Currently I'm studying computer science at the Univerity of Antwerp to further understand the fundamentals of programming,
-          so I'm ready for the future as a front-end developer and all-round crossmedia designer.
-        </p>
+        <div class="content">
+          <p>
+            Want to get in touch? Send me a message and I will make sure to answer as soon as possible!
+          </p>
+          <form id="contact-form" action="https://formspree.io/tijs.verellen@hotmail.com" method="POST">
+            <input class="form-input" type="email" name="email" placeholder="Email address"/>
+            <input class="form-input" type="text" name="subject" placeholder="Subject"/>
+            <textarea class="form-input" rows="15" name="question" placeholder="Ask me anything..."></textarea>
+            <input class="form-submit" type="submit" value="send"/>
+          </form>
+        </div>
       </div>
     </div>
 

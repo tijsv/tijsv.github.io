@@ -23,10 +23,8 @@ function main() {
   var pElement = document.getElementById('home-inner').children[2];
   writeLetters(30, i = 0, h2String, h2Element, () => {
     writeLetters(40, i = 0, h1String, h1Element, () => {
-      setTimeout(() => {
-        pElement.classList.add('visible');
-        h2Element.classList.add('fade-up');
-      }, 500);
+      pElement.classList.add('visible');
+      h2Element.classList.add('fade-up');
     });
   });
 
@@ -142,19 +140,19 @@ function main() {
               for(i = 5; i < allWorks.length; i++) {
                 allWorks[i].style.display = "none";
               }
-              title.scrollIntoView();
+              title.scrollIntoView({block: "start", inline: "start"});
             } else if(480 < window.innerWidth && window.innerWidth < 768 && allWorks.length > 8) {
               console.log(window.innerWidth, 'all works with index higher than', 7, ' need to get display none for good display..');
               for(i = 7; i < allWorks.length; i++) {
                 allWorks[i].style.display = "none";
               }
-              title.scrollIntoView();
+              title.scrollIntoView({block: "start", inline: "start"});
             } else if(window.innerWidth < 481 && allWorks.length > 4) {
               console.log(window.innerWidth, 'all works with index higher than', 3, ' need to get display none for good display..');
               for(i = 3; i < allWorks.length; i++) {
                 allWorks[i].style.display = "none";
               }
-              title.scrollIntoView();
+              title.scrollIntoView({block: "start", inline: "start"});
             }
           }, 400);
           setTimeout(() => {
