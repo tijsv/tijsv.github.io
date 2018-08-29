@@ -413,7 +413,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
               float: left;
               margin-top: 2rem;
               margin-right: 1rem;
-              text-transform: uppercase; }
+              text-transform: uppercase;
+              transition: 0.2s all ease; }
+            #work #work-inner #work-main #work-details .work-details-inner .text a:hover {
+              background-color: white;
+              transition: 0.2s all ease; }
           #work #work-inner #work-main #work-details .work-details-inner .work-img {
             position: relative;
             height: 40vw;
@@ -433,9 +437,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
                 color: #FBF5F3;
                 text-transform: uppercase;
                 font-weight: 700;
-                cursor: pointer; }
+                cursor: pointer;
+                transition: 0.2s all ease; }
               #work #work-inner #work-main #work-details .work-details-inner .work-img .img-buttons .next-img:hover {
-                background-color: #ef2192; }
+                background-color: #ef2192;
+                transition: 0.2s all ease; }
     #work #work-inner .visible {
       opacity: 1 !important;
       transition: 1s all ease; }
@@ -496,9 +502,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         color: #FBF5F3;
         text-transform: uppercase;
         font-weight: 700;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: 0.2s all ease; }
       #contact #contact-inner form .form-submit:hover {
-        background-color: #ef5221; }
+        background-color: #ef5221;
+        transition: 0.2s all ease; }
     #contact #contact-inner .visible {
       opacity: 0.9;
       transition: 1s all ease; }

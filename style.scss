@@ -506,6 +506,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
               margin-top: 2rem;
               margin-right: 1rem;
               text-transform: uppercase;
+              transition: 0.2s all ease;
+            }
+            a:hover {
+              background-color: white;
+              transition: 0.2s all ease;
             }
           }
           .work-img {
@@ -528,9 +533,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
                 text-transform: uppercase;
                 font-weight: 700;
                 cursor: pointer;
+                transition: 0.2s all ease;
               }
               .next-img:hover {
                 background-color: lighten($other, 10%);
+                transition: 0.2s all ease;
               }
             }
           }
@@ -611,9 +618,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         text-transform: uppercase;
         font-weight: 700;
         cursor: pointer;
+        transition: 0.2s all ease;
       }
       .form-submit:hover {
         background-color: lighten($contrast, 10%);
+        transition: 0.2s all ease;
       }
     }
     .visible {
