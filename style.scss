@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   background-color: $light;
   a {
     color: $dark;
-    font-weight: 400;
+    font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem;
@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     p {
       font-size: 0.9em;
       font-weight: 300;
-      line-height: 1.8em;
+      line-height: 2em;
     }
     .skill-items {
       width: 100%;
@@ -380,7 +380,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
             width: 100%;
             padding: 2rem;
             font-size: 1.2em;
-            font-weight: 700;
+            font-weight: 500;
             text-transform: uppercase;
             text-align: center;
           }
@@ -489,8 +489,12 @@ h1, h2, h3, h4, h5, p, ul, li, body {
             p {
               color: $light;
               font-size: 0.9em;
-              font-weight: 300;
-              line-height: 1.8em;
+              font-weight: 400;
+              line-height: 2em;
+              span {
+                color: $primary;
+                font-weight: 700;
+              }
             }
             a {
               color: $dark;
@@ -501,6 +505,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
               float: left;
               margin-top: 2rem;
               margin-right: 1rem;
+              text-transform: uppercase;
             }
           }
           .work-img {
@@ -625,10 +630,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 #footer {
   background-color: $dark;
   p {
-    padding: 2rem;
+    padding: 1.5rem;
     margin: 0 auto;
     text-align: center;
     color: $light;
+    font-size: 0.9em;
   }
 }
 

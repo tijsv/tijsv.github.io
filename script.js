@@ -74,10 +74,10 @@ function main() {
       "front-end & logo & video",
       `
       <p>
-        For my bachelor's thesis I built a landingpage directed towards technology companies for Zenjoy, my internship company at the time. A lot of research went into this project. I started with understanding the basic fundamentals of a landingpage, then examined the best marketing models for the job and also questioned multiple businesses about their experience with Zenjoy.<br>
-        After I accumulated this information, I started designing a template for different kinds of landingpages that might be needed in the future, with one finished design for Zenjoy Technology. I was asked to keep a clear link between the main Zenjoy brand and the different landingpages in doing so.<br>
+        For my bachelor's thesis I built a landing page directed towards technology companies for Zenjoy, my internship company at the time. A lot of research went into this project. I started with understanding the basic fundamentals of a landing page, then examined the best marketing models for the job and also questioned multiple businesses about their experience with Zenjoy.<br>
+        After I accumulated this information, I started designing a template for different kinds of landing pages that might be needed in the future, with one finished design for Zenjoy Technology. I was asked to keep a clear link between the main Zenjoy brand and the different landing pages in doing so.<br>
         Then I built the page from scratch, making use of Zenjoys own CMS Nimbu. All content you see on the website is made by me.
-        To top of my thesis, I also made an introduction video that brings together all information on the landingpage.
+        To top of my thesis, I also made an introduction video that brings together all information on the landing page.
       </p>
       <a href="http://tech.zenjoy.be/" target="_blank">website</a>
       <a href="https://www.youtube.com/watch?v=r6qCmm3rf9E" target="_blank">video</a>
@@ -101,7 +101,7 @@ function main() {
       "front-end",
       `
       <p>
-        At the end of my internship at Zenjoy I was assigned to design and build a website for VIVO. I went to VIVO in Brussels to attend a meeting where we exchanged ideas to start the project. We tackled a lot of problems concerning the way they wanted to visualize all the information on their website. The content consists of nine subjects, which had to easy to access by the user. That's why we came up with a three by three grid to show these nine subjecs on the front page of the website. We found a template that fit this idea and so I started to build the website.
+        At the end of my internship at Zenjoy I was assigned to design and build a website for VIVO. I went to VIVO in Brussels to attend a meeting where we exchanged ideas to start the project. We tackled a lot of problems concerning the way they wanted to visualize all the information on their website. The content consists of nine subjects, which had to be easy to access by the user. That's why I came up with a three by three grid to show these nine subjecs on the front page of the website. I found a template that fit this idea and started to build the website.
       </p>
       <a href="https://www.waardevolwerk.be/" target="_blank">website</a>
       `
@@ -112,10 +112,10 @@ function main() {
       "front-end & back-end",
       `
       <p>
-      This website is a personal project. I love to watch movies and series, but I found myself forgetting which ones I already watched. That's why I wanted to make a website where people can save the movies and series they watched, and get notified when a sequel or new season comes out. <br>
-      To realise this, it was necessary for me to learn how to build not only the front-end, but also the back-end of a website myself. I did some research on which programming language to use for this. I already worked with PHP before, but I found a lot of interesting information about Node.js. I eventually chose to go for the newer Node.js technology to build my back-end.<br>
-      So the back-end of the website is written with Node.js and Express. I used MongoDB and the Mongoose module to make a database where I store user data as well as some of the data I retrieve from TMDB, so the number of API request (handled server-side) doesn't reach its limit. To secure users data I used Passport.js. Finally for the front-end I used the EJS templating language, SASS and vanilla javascript.<br>
-      This project is still under construction, but users can already make accounts and use a few of the final features. I included this project mostly to show I understand the fundamentals of the back-end of a web application.
+        This website is a personal project. I love to watch movies and series, but I found myself forgetting which ones I already watched. That's why I wanted to make a website where people can save the movies and series they watched, and get notified when a sequel or new season comes out. <br>
+        To realise this, it was necessary for me to learn how to build not only the front-end, but also the back-end of a website myself. I did some research on which programming language to use for this. I already worked with PHP before, but I found a lot of interesting information about Node.js. I eventually chose to go for the newer Node.js technology to build my back-end.<br>
+        So the back-end of the website is written with Node.js and Express. I used MongoDB and the Mongoose module to make a database where I store user data as well as some of the data I retrieve from TMDB, so the number of API request (handled server-side) doesn't reach its limit. To secure users data I used Passport.js. Finally for the front-end I used the EJS templating language, SASS and vanilla javascript.<br>
+        This project is still under construction, but users can already make accounts and use a few of the final features. I included this project mostly to show I understand the fundamentals of the back-end of a web application.
       </p>
       <a href="http://cinemame.herokuapp.com/" target="_blank">website</a>
       `
@@ -126,13 +126,12 @@ function main() {
       "logo & 3D",
       `
       <p>
-      For my bachelor's thesis I built a landingpage directed towards technology companies for Zenjoy, my internship company at the time. A lot of research went into this project. I started with understanding the basic fundamentals of a landingpage, then examined the best marketing models for the job and also questioned multiple businesses about their experience with Zenjoy.
-      After I accumulated this information, I started designing a template for different kinds of landingpages that might be needed in the future, with one finished design for Zenjoy Technology. I was asked to keep a clear link between the main Zenjoy brand and the different landingpages in doing so.
-      Then I built the page from scratch, making use of Zenjoys own CMS Nimbu. All content you see on the website is made by me.
-      To top of my thesis, I also made an introduction video that brings together all information on the landingpage.
+        This is a logo I designed for a new music event called Subbassmentz. For their facebook page they needed a logo and a banner that fit perfectly with the underground and bass music genres.<br>
+        The logo itself clearly tells you the name of the event, with a staircase shape in the top right corner of the logo. The staircase going down links to the name of the music event originating from the words sub and basement.<br>
+        To make the banner, I made a 3D version of it with a fitting material to the style I was going for.
+        Overall the finished graphics have a grungy feeling that goes well with the music genres which Subbassmentz stands for.
       </p>
-      <a href="http://tech.zenjoy.be/" target="_blank">website</a>
-      <a href="https://www.youtube.com/watch?v=r6qCmm3rf9E" target="_blank">video</a>
+      <a href="https://www.facebook.com/subbassmentz" target="_blank">Facebook page</a>
       `
     ],
     [
@@ -141,13 +140,13 @@ function main() {
       "poster & video",
       `
       <p>
-      For my bachelor's thesis I built a landingpage directed towards technology companies for Zenjoy, my internship company at the time. A lot of research went into this project. I started with understanding the basic fundamentals of a landingpage, then examined the best marketing models for the job and also questioned multiple businesses about their experience with Zenjoy.
-      After I accumulated this information, I started designing a template for different kinds of landingpages that might be needed in the future, with one finished design for Zenjoy Technology. I was asked to keep a clear link between the main Zenjoy brand and the different landingpages in doing so.
-      Then I built the page from scratch, making use of Zenjoys own CMS Nimbu. All content you see on the website is made by me.
-      To top of my thesis, I also made an introduction video that brings together all information on the landingpage.
+        This poster I made for a school assignment. I had to make a poster and advertising video for a new play named 'Grietje' (Hansel and Gretel).
+        <br>I tried out a lot of illustration styles for this project and I finally chose to create a feeling of depth by lightening the colors of further placed objects. The idea for the poster was to be atrractive to children, as they were the primary target audience for the play. This is why i chose a warm color palette, rather than going for realistic colors.
+        All illustrations were made by me, using photoshop and a WACOM tablet. <br>
+        The video was constructed using the photoshop layers in after effects, to keep the overal look and feel exactly the same as that of the poster.
       </p>
-      <a href="http://tech.zenjoy.be/" target="_blank">website</a>
-      <a href="https://www.youtube.com/watch?v=r6qCmm3rf9E" target="_blank">video</a>
+      <a href="works/grietje_pdf.pdf" target="_blank">poster</a>
+      <a href="https://www.youtube.com/watch?v=ExQB65SE-fg" target="_blank">video</a>
       `
     ],
     [
@@ -156,13 +155,13 @@ function main() {
       "poster & video",
       `
       <p>
-      For my bachelor's thesis I built a landingpage directed towards technology companies for Zenjoy, my internship company at the time. A lot of research went into this project. I started with understanding the basic fundamentals of a landingpage, then examined the best marketing models for the job and also questioned multiple businesses about their experience with Zenjoy.
-      After I accumulated this information, I started designing a template for different kinds of landingpages that might be needed in the future, with one finished design for Zenjoy Technology. I was asked to keep a clear link between the main Zenjoy brand and the different landingpages in doing so.
-      Then I built the page from scratch, making use of Zenjoys own CMS Nimbu. All content you see on the website is made by me.
-      To top of my thesis, I also made an introduction video that brings together all information on the landingpage.
+        This poster I also made for a school assignment. This time I had to make a poster and a five second long advertising video for video billboards to advertise a new exhibition called 'Een andere wereld' (Another world) in Museum Dr. Guislain, Gent.
+        The exhibition showed works revolving around psychosis over a period of two centuries. We got to see a few of the works, to get a feel for the subject, before starting with the design process.<br>
+        The main graphic on the poster represents a brain, made out of puzzle pieces, exploding... Or coming together?<br>
+        I made the puzzle pieces using 3DS Max and animated them to make the five second video.
       </p>
-      <a href="http://tech.zenjoy.be/" target="_blank">website</a>
-      <a href="https://www.youtube.com/watch?v=r6qCmm3rf9E" target="_blank">video</a>
+      <a href="works/anotherworld_pdf.pdf" target="_blank">poster</a>
+      <a href="https://www.youtube.com/watch?v=jnIsE1uFigQ" target="_blank">video</a>
       `
     ],
     [
@@ -171,30 +170,26 @@ function main() {
       "logo",
       `
       <p>
-      For my bachelor's thesis I built a landingpage directed towards technology companies for Zenjoy, my internship company at the time. A lot of research went into this project. I started with understanding the basic fundamentals of a landingpage, then examined the best marketing models for the job and also questioned multiple businesses about their experience with Zenjoy.
-      After I accumulated this information, I started designing a template for different kinds of landingpages that might be needed in the future, with one finished design for Zenjoy Technology. I was asked to keep a clear link between the main Zenjoy brand and the different landingpages in doing so.
-      Then I built the page from scratch, making use of Zenjoys own CMS Nimbu. All content you see on the website is made by me.
-      To top of my thesis, I also made an introduction video that brings together all information on the landingpage.
+        For this project I was contacted by people I knew in my home town Berlaar. They represented a new organisation called 'Bezorgde Berlaarse Burgers' (Concerned citizens of Berlaar) and were in need of a logo. They explained to me that they wanted to preserve nature and older buildings in our town and this had to be visible in the logo I made.
+        I thought of the more iconic places in Berlaar and made a very simple representation of them with the least possible amount of lines. Fitting them together was not an easy job, but I managed to create a coherent image at the end.
       </p>
-      <a href="http://tech.zenjoy.be/" target="_blank">website</a>
-      <a href="https://www.youtube.com/watch?v=r6qCmm3rf9E" target="_blank">video</a>
       `
     ],
-    [
-      "Infographic of Electric Production",
-      ["works/infographic.png", "works/infographic_2.png"],
-      "infographic",
-      `
-      <p>
-      For my bachelor's thesis I built a landingpage directed towards technology companies for Zenjoy, my internship company at the time. A lot of research went into this project. I started with understanding the basic fundamentals of a landingpage, then examined the best marketing models for the job and also questioned multiple businesses about their experience with Zenjoy.
-      After I accumulated this information, I started designing a template for different kinds of landingpages that might be needed in the future, with one finished design for Zenjoy Technology. I was asked to keep a clear link between the main Zenjoy brand and the different landingpages in doing so.
-      Then I built the page from scratch, making use of Zenjoys own CMS Nimbu. All content you see on the website is made by me.
-      To top of my thesis, I also made an introduction video that brings together all information on the landingpage.
-      </p>
-      <a href="http://tech.zenjoy.be/" target="_blank">website</a>
-      <a href="https://www.youtube.com/watch?v=r6qCmm3rf9E" target="_blank">video</a>
-      `
-    ]
+    // [
+    //   "Infographic of Electric Production",
+    //   ["works/infographic.png", "works/infographic_2.png"],
+    //   "infographic",
+    //   `
+    //   <p>
+    //   For my bachelor's thesis I built a landingpage directed towards technology companies for Zenjoy, my internship company at the time. A lot of research went into this project. I started with understanding the basic fundamentals of a landingpage, then examined the best marketing models for the job and also questioned multiple businesses about their experience with Zenjoy.
+    //   After I accumulated this information, I started designing a template for different kinds of landingpages that might be needed in the future, with one finished design for Zenjoy Technology. I was asked to keep a clear link between the main Zenjoy brand and the different landingpages in doing so.
+    //   Then I built the page from scratch, making use of Zenjoys own CMS Nimbu. All content you see on the website is made by me.
+    //   To top of my thesis, I also made an introduction video that brings together all information on the landingpage.
+    //   </p>
+    //   <a href="works/infographic_large.jpg" target="_blank">poster</a>
+    //   <a href="https://www.youtube.com/watch?v=r6qCmm3rf9E" target="_blank">video</a>
+    //   `
+    // ]
   ];
 
   // create a grid of all works

@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   background-color: #FBF5F3; }
   #navigation a {
     color: #11151C;
-    font-weight: 400;
+    font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem;
@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     #skills #skills-inner p {
       font-size: 0.9em;
       font-weight: 300;
-      line-height: 1.8em; }
+      line-height: 2em; }
     #skills #skills-inner .skill-items {
       width: 100%;
       z-index: 1; }
@@ -310,7 +310,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
             width: 100%;
             padding: 2rem;
             font-size: 1.2em;
-            font-weight: 700;
+            font-weight: 500;
             text-transform: uppercase;
             text-align: center; }
         #work #work-inner #work-main .single-work .single-work-tag {
@@ -399,8 +399,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
             #work #work-inner #work-main #work-details .work-details-inner .text p {
               color: #FBF5F3;
               font-size: 0.9em;
-              font-weight: 300;
-              line-height: 1.8em; }
+              font-weight: 400;
+              line-height: 2em; }
+              #work #work-inner #work-main #work-details .work-details-inner .text p span {
+                color: #18ce0f;
+                font-weight: 700; }
             #work #work-inner #work-main #work-details .work-details-inner .text a {
               color: #11151C;
               font-weight: 700;
@@ -409,7 +412,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
               padding: 1rem;
               float: left;
               margin-top: 2rem;
-              margin-right: 1rem; }
+              margin-right: 1rem;
+              text-transform: uppercase; }
           #work #work-inner #work-main #work-details .work-details-inner .work-img {
             position: relative;
             height: 40vw;
@@ -505,10 +509,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
 #footer {
   background-color: #11151C; }
   #footer p {
-    padding: 2rem;
+    padding: 1.5rem;
     margin: 0 auto;
     text-align: center;
-    color: #FBF5F3; }
+    color: #FBF5F3;
+    font-size: 0.9em; }
 
 @media (max-width: 1440px) {
   #work #work-inner #work-main .single-work {
