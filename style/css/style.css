@@ -696,7 +696,10 @@ h1, h2, h3, h4, h5, p, ul, li, body {
         font-size: 4em; } }
 @media (min-width: 480px) and (max-width: 600px) {
   #work #work-inner #work-main .single-work .single-work-tag {
-    font-size: 0.8em; } }
+    font-size: 0.8em; }
+
+  #cv h1 {
+    font-size: 3em; } }
 /* Landscape phones and down */
 @media (max-width: 480px) {
   body {
@@ -745,7 +748,10 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   #contact #contact-inner {
     width: 90%; }
     #contact #contact-inner h1 {
-      font-size: 3em; } }
+      font-size: 3em; }
+
+  #cv h1 {
+    font-size: 2em; } }
 #print-button {
   position: fixed;
   top: 0;

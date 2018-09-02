@@ -930,6 +930,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   #work #work-inner #work-main .single-work .single-work-tag {
     font-size: 0.8em;
   }
+  #cv {
+    h1 {
+      font-size: 3em;
+    }
+  }
 }
 
 /* Landscape phones and down */
@@ -1009,6 +1014,11 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       h1 {
         font-size: 3em;
       }
+    }
+  }
+  #cv {
+    h1 {
+      font-size: 2em;
     }
   }
 }
