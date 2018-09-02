@@ -14,6 +14,14 @@ function main() {
     }
   }
 
+  document.getElementById('cv').classList.add('reveal-cv');
+  setTimeout(() => {
+    document.getElementById('cv-inner-left').classList.add('reveal-cv');
+  },400);
+  setTimeout(() => {
+    document.getElementById('cv-inner-right').classList.add('reveal-cv');
+  },600);
+
 }
 
 window.onload = () => {

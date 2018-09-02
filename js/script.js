@@ -21,7 +21,7 @@ function main() {
   var h1Element = document.getElementById('home-inner').children[1];
   var h1String = h1Element.dataset.string.split('');
   var pElement = document.getElementById('home-inner').children[2];
-  writeLetters(30, i = 0, h2String, h2Element, () => {
+  writeLetters(20, i = 0, h2String, h2Element, () => {
     writeLetters(40, i = 0, h1String, h1Element, () => {
       pElement.classList.add('visible');
       h2Element.classList.add('fade-up');
@@ -320,7 +320,7 @@ function writeLetters(speed, index, letters, object, callback = () => {}) {
   object.innerHTML += letters[index];
   var delay = Math.floor(Math.random() * speed) + speed;
   if(letters[index] === ",") {
-    delay = 600;
+    delay = 200;
   }
   index++;
   if(index < letters.length) {
