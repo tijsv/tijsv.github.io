@@ -22,6 +22,10 @@ function main() {
     document.getElementById('cv-inner-right').classList.add('reveal-cv');
   },600);
 
+  document.getElementById('print-button').onclick = () => {
+    window.print();
+  }
+
 }
 
 window.onload = () => {
