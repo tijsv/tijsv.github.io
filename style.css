@@ -1,8 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #FBF5F3;
-  overflow-x: hidden;
-  font-size: 0.95em; }
+  overflow-x: hidden; }
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -32,14 +31,14 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   width: 27px;
   z-index: 20;
   cursor: pointer;
-  background-color: #FBF5F3;
+  background-color: #11151C;
   padding: 1rem; }
   #menu-icon-wrapper #menu-icon {
     transition: 0.6s all ease; }
     #menu-icon-wrapper #menu-icon .line {
       height: 3px;
       margin: 5px 0;
-      background-color: #11151C;
+      background-color: #FBF5F3;
       transition: 0.3s all ease; }
     #menu-icon-wrapper #menu-icon .line:first-child {
       margin-top: 0; }
@@ -72,9 +71,9 @@ h1, h2, h3, h4, h5, p, ul, li, body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  background-color: #FBF5F3; }
+  background-color: #11151C; }
   #navigation a {
-    color: #11151C;
+    color: #FBF5F3;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
@@ -154,7 +153,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       text-transform: uppercase;
       font-size: 6em;
       font-weight: 700;
-      line-height: 1em; }
+      line-height: 1em;
+      margin-bottom: 1rem; }
       #story #story-inner h1 span {
         visibility: hidden;
         transform: scaleX(0.01);
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       opacity: 1;
       transition: 1s all ease; }
     #story #story-inner .fade-out {
-      opacity: 0.2;
+      opacity: 0.5;
       transition: 1s all ease; }
 
 #skills {
@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
             color: #FBF5F3;
             width: 100%;
             padding: 2rem;
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: 500;
             text-transform: uppercase;
             text-align: center; }
@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
                 letter-spacing: -100px; }
             #work #work-inner #work-main #work-details .work-details-inner .text p {
               color: #FBF5F3;
-              font-size: 0.9em;
+              font-size: 0.85em;
               font-weight: 400;
               line-height: 2em; }
               #work #work-inner #work-main #work-details .work-details-inner .text p span {
@@ -407,6 +407,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
             #work #work-inner #work-main #work-details .work-details-inner .text a {
               color: #11151C;
               font-weight: 700;
+              font-size: 0.9em;
               text-decoration: none;
               background-color: #FBF5F3;
               padding: 1rem;
@@ -461,7 +462,8 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       text-transform: uppercase;
       font-size: 6em;
       font-weight: 700;
-      line-height: 1em; }
+      line-height: 1em;
+      margin-bottom: 1rem; }
       #contact #contact-inner h1 span {
         visibility: hidden;
         transform: scaleX(0.01);
@@ -479,15 +481,17 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       margin-top: 4rem;
       width: 100%; }
       #contact #contact-inner form textarea, #contact #contact-inner form input {
+        color: #FBF5F3;
         outline: none;
         border: none;
-        background-color: white;
+        background-color: #11151C;
         border-radius: 0;
         font-family: 'Montserrat', sans-serif;
         box-sizing: border-box; }
       #contact #contact-inner form ::placeholder {
         font-family: 'Montserrat', sans-serif;
-        color: #11151C; }
+        color: #FBF5F3;
+        opacity: 0.5; }
       #contact #contact-inner form textarea {
         resize: none; }
       #contact #contact-inner form .form-input {
@@ -511,7 +515,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       opacity: 0.9;
       transition: 1s all ease; }
     #contact #contact-inner .fade-out {
-      opacity: 0.1;
+      opacity: 0.5;
       transition: 1s all ease; }
 
 #footer {
@@ -575,7 +579,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       height: 70vw; }
     #work #work-inner #work-main #work-details .work-details-inner .text {
       width: 70vw;
-      margin-bottom: 6rem; } }
+      margin-bottom: 2rem; } }
 /* Landscape phone to portrait tablet */
 @media (max-width: 979px) {
   #story #story-inner {
@@ -675,7 +679,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       height: 90vw; }
     #work #work-inner #work-main #work-details .work-details-inner .text {
       width: 90vw;
-      margin-bottom: 6rem; }
+      margin-bottom: 2rem; }
 
   #contact #contact-inner {
     width: 90%; }

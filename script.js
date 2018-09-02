@@ -113,9 +113,8 @@ function main() {
       `
       <p>
         This website is a personal project. I love to watch movies and series, but I found myself forgetting which ones I already watched. That's why I wanted to make a website where people can save the movies and series they watched, and get notified when a sequel or new season comes out. <br>
-        To realise this, it was necessary for me to learn how to build not only the front-end, but also the back-end of a website myself. I did some research on which programming language to use for this. I already worked with PHP before, but I found a lot of interesting information about Node.js. I eventually chose to go for the newer Node.js technology to build my back-end.<br>
-        So the back-end of the website is written with Node.js and Express. I used MongoDB and the Mongoose module to make a database where I store user data as well as some of the data I retrieve from TMDB, so the number of API request (handled server-side) doesn't reach its limit. To secure users data I used Passport.js. Finally for the front-end I used the EJS templating language, SASS and vanilla javascript.<br>
-        This project is still under construction, but users can already make accounts and use a few of the final features. I included this project mostly to show I understand the fundamentals of the back-end of a web application.
+        To realise this, it was necessary for me to learn how to build not only the front-end, but also the back-end of a website myself. The back-end of the website is written with Node.js and Express. I used MongoDB and the Mongoose module to make a database where I store user data as well as some of the data I retrieve from the TMDB API. To secure users data I used Passport.js. Finally for the front-end I used the EJS templating language, SASS and vanilla javascript.<br>
+        This project is still under construction, but users can already make accounts and use a few of the final features.
       </p>
       <a href="http://cinemame.herokuapp.com/" target="_blank">website</a>
       `
@@ -174,22 +173,7 @@ function main() {
         I thought of the more iconic places in Berlaar and made a very simple representation of them with the least possible amount of lines. Fitting them together was not an easy job, but I managed to create a coherent image at the end.
       </p>
       `
-    ],
-    // [
-    //   "Infographic of Electric Production",
-    //   ["works/infographic.png", "works/infographic_2.png"],
-    //   "infographic",
-    //   `
-    //   <p>
-    //   For my bachelor's thesis I built a landingpage directed towards technology companies for Zenjoy, my internship company at the time. A lot of research went into this project. I started with understanding the basic fundamentals of a landingpage, then examined the best marketing models for the job and also questioned multiple businesses about their experience with Zenjoy.
-    //   After I accumulated this information, I started designing a template for different kinds of landingpages that might be needed in the future, with one finished design for Zenjoy Technology. I was asked to keep a clear link between the main Zenjoy brand and the different landingpages in doing so.
-    //   Then I built the page from scratch, making use of Zenjoys own CMS Nimbu. All content you see on the website is made by me.
-    //   To top of my thesis, I also made an introduction video that brings together all information on the landingpage.
-    //   </p>
-    //   <a href="works/infographic_large.jpg" target="_blank">poster</a>
-    //   <a href="https://www.youtube.com/watch?v=r6qCmm3rf9E" target="_blank">video</a>
-    //   `
-    // ]
+    ]
   ];
 
   // create a grid of all works
