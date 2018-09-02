@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-image: url("img/pic_bw.png");
+    background-image: url("../../img/pic_bw.png");
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -526,6 +526,55 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     text-align: center;
     color: #FBF5F3;
     font-size: 0.9em; }
+
+#cv {
+  width: 100vw;
+  background-color: #FBF5F3; }
+  #cv h1 {
+    color: #280c03;
+    font-size: 4em;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 4rem auto 1rem auto; }
+  #cv p {
+    color: #11151C;
+    width: 80%;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto;
+    opacity: 0.4; }
+  #cv #cv-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2rem auto 4rem auto; }
+    #cv #cv-inner #cv-inner-left {
+      width: 20%; }
+    #cv #cv-inner #cv-inner-right {
+      width: 70%; }
+    #cv #cv-inner i {
+      width: 25px;
+      text-align: center;
+      margin-right: 1rem; }
+    #cv #cv-inner h2 {
+      color: #280c03;
+      font-size: 1.6em;
+      margin-bottom: 1rem;
+      text-transform: uppercase; }
+    #cv #cv-inner ul {
+      list-style-type: none;
+      line-height: 1.6em;
+      margin-bottom: 2rem; }
+      #cv #cv-inner ul li {
+        text-decoration: none;
+        font-weight: 500;
+        color: #11151C;
+        margin-bottom: 1rem;
+        opacity: 0.9; }
+        #cv #cv-inner ul li span {
+          font-weight: 700; }
+        #cv #cv-inner ul li .fade {
+          opacity: 0.4; }
 
 @media (max-width: 1440px) {
   #work #work-inner #work-main .single-work {

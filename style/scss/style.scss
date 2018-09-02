@@ -3,7 +3,7 @@
 // https://coolors.co/18ce0f-071e22-d5f2e3-11151c-6e0d25
 
 $dark: #11151C; //rgb(17,21,28)
-$light: #FBF5F3; //#D5F2E3
+$light: #FBF5F3;
 $primary: #18ce0f;
 $contrast: #ce3c0f;
 $other: #ce0f78;
@@ -12,7 +12,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: $light;
   overflow-x: hidden;
-  // font-size: 0.95em;
 }
 
 ::-webkit-scrollbar {
@@ -129,7 +128,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-image: url('img/pic_bw.png');
+    background-image: url('../../img/pic_bw.png');
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -650,6 +649,69 @@ h1, h2, h3, h4, h5, p, ul, li, body {
     color: $light;
     font-size: 0.9em;
   }
+}
+
+#cv {
+  width: 100vw;
+  background-color: $light;
+  h1 {
+    color: darken($contrast, 35%);
+    font-size: 4em;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 4rem auto 1rem auto;
+  }
+  p {
+    color: $dark;
+    width: 80%;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto;
+    opacity: 0.4;
+  }
+  #cv-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2rem auto 4rem auto;
+    #cv-inner-left {
+      width: 20%;
+    }
+    #cv-inner-right {
+      width: 70%;
+    }
+    i {
+      width: 25px;
+      text-align: center;
+      margin-right: 1rem;
+    }
+    h2 {
+      color: darken($contrast, 35%);
+      font-size: 1.6em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    ul {
+      list-style-type: none;
+      line-height: 1.6em;
+      margin-bottom: 2rem;
+      li {
+        text-decoration: none;
+        font-weight: 500;
+        color: $dark;
+        margin-bottom: 1rem;
+        opacity: 0.9;
+        span {
+          font-weight: 700;
+        }
+        .fade {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+
+
 }
 
 // media queries

@@ -113,7 +113,7 @@ function main() {
       `
       <p>
         This website is a personal project. I love to watch movies and series, but I found myself forgetting which ones I already watched. That's why I wanted to make a website where people can save the movies and series they watched, and get notified when a sequel or new season comes out. <br>
-        To realise this, it was necessary for me to learn how to build not only the front-end, but also the back-end of a website myself. The back-end of the website is written with Node.js and Express. I used MongoDB and the Mongoose module to make a database where I store user data as well as some of the data I retrieve from the TMDB API. To secure users data I used Passport.js. Finally for the front-end I used the EJS templating language, SASS and vanilla javascript.<br>
+        To realise this, it was necessary for me to learn how to build not only the front-end, but also the back-end of a website myself. The back-end of the website is written with Node.js and Express. I used MongoDB and the Mongoose module to make a database where I store user data as well as some of the data I retrieve from the TMDB API. To secure users data I used Passport.js. Finally for the front-end I used the EJS templating language, SASS and vanilla JavaScript.<br>
         This project is still under construction, but users can already make accounts and use a few of the final features.
       </p>
       <a href="http://cinemame.herokuapp.com/" target="_blank">website</a>
