@@ -255,7 +255,7 @@ function main() {
   // on click function for the back button in work-details
   var backButton = document.getElementsByClassName('back-button')[0];
   backButton.onclick = () => {
-    details.getElementsByClassName('work-details-inner')[0].getElementsByTagName('p')[0].classList.remove('visible');
+    details.getElementsByClassName('work-details-inner')[0].getElementsByClassName('content')[0].classList.remove('visible');
     image.classList.remove('visible');
     details.getElementsByClassName('back-button')[0].classList.remove('visible');
     title.innerHTML = "<span>|</span>";
