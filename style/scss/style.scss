@@ -689,7 +689,7 @@ h1, h2, h3, h4, h5, p, ul, li, body {
       margin-right: 1rem;
     }
     h2 {
-      color: darken($contrast, 35%);
+      color: $contrast;
       font-size: 1.6em;
       margin-bottom: 1rem;
       text-transform: uppercase;
