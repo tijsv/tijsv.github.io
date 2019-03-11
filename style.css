@@ -235,8 +235,9 @@ button.btn {
       #skills .cards {
         flex-direction: column; }
         #skills .cards .card {
-          justify-content: space-center;
-          margin-bottom: 3rem; } }
+          margin-bottom: 3rem; }
+          #skills .cards .card:last-child {
+            margin-bottom: 0; } }
     #skills .cards .card {
       display: flex;
       width: 100%;
