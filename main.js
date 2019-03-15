@@ -46,6 +46,10 @@
             {
                 name: 'hide-icon',
                 style: 'transform: scale(0) !important',
+            },
+            {
+                name: 'navigation-text',
+                style: 'transform: translateX(0) scale(1) !important; opacity: 1 !important;'
             }
         ], {
             default: {
@@ -91,6 +95,44 @@
         }
 
         // navigation text
+        let navigationTextElements = document.querySelectorAll('[data-navigation-text]');
+        let navigationTextArray = [
+            "Frontend developer",
+            "Graphic designer",
+            "Coffee inhaler",
+            "JavaScript ninja",
+            "Movie lover",
+            "Meme connoisseur",
+            "Beer Taster",
+        ];
+        let currentNavigationText = navigationTextArray[0];
+        
+        navigationTextElements[0].innerHTML = currentNavigationText;
+        jfs.toggleAnimation(navigationTextElements[0]);
+
+        setInterval(function() {
+
+            currentNavigationText = getNextNavigationText(navigationTextArray, currentNavigationText);           
+
+            for(let i = 0; i < navigationTextElements.length; i++) {
+                if(navigationTextElements[i].classList.contains('jfs-event-navigation-text')) {
+                    jfs.toggleAnimation(navigationTextElements[i]);
+                } else {
+                    navigationTextElements[i].innerHTML = currentNavigationText;
+                    jfs.toggleAnimation(navigationTextElements[i]);
+                }
+            }
+            
+        }, 5000);
+
+        function getNextNavigationText(array, current) {
+            for(let i = 0; i < array.length; i++) {
+                if(array[i] === current) {
+                    if(i === array.length - 1) return array[0];
+                    else return array[i + 1];
+                }
+            }
+        }
 
     }
 
