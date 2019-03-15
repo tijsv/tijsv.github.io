@@ -243,10 +243,21 @@ button.btn {
   align-items: center; }
 
 #introduction {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #1b2830; }
+  background-image: url("./pic.jpg");
+  background-position: bottom center;
+  background-size: cover; }
+  #introduction .filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1b2830;
+    opacity: .95; }
   #introduction .section {
     margin-top: 6rem;
     margin-bottom: 6rem;

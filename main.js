@@ -103,7 +103,7 @@
             "JavaScript ninja",
             "Movie lover",
             "Meme connoisseur",
-            "Beer Taster",
+            "Beer taster",
         ];
         let currentNavigationText = navigationTextArray[0];
         
