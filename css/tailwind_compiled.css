@@ -442,6 +442,14 @@ button,
   background-color: #ffbbca;
 }
 
+.bg-bottom {
+  background-position: bottom;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
 .border-grey-lightest {
   border-color: #f8fafc;
 }
@@ -611,6 +619,13 @@ button,
 
 .relative {
   position: relative;
+}
+
+.pin {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .pin-b {

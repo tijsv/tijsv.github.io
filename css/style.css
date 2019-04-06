@@ -8,6 +8,10 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+.opacity-5 {
+  opacity: 0.05;
+}
+
 span {
   display: inline-block;
 }
@@ -25,11 +29,11 @@ p {
 }
 
 .bg-white-to-transparant-top {
-  background-image: linear-gradient(to top, #22292f, #22292f, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgba(34, 41, 47, 0.85), rgba(34, 41, 47, 0.85), rgba(0, 0, 0, 0));
 }
 
 .bg-white-to-transparant-bottom {
-  background-image: linear-gradient(to bottom, #22292f, #22292f, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, rgba(34, 41, 47, 0.85), rgba(34, 41, 47, 0.85), rgba(0, 0, 0, 0));
 }
 
 .click-animation {
