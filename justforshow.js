@@ -2,8 +2,6 @@ class JFS {
 
     constructor(customAnimations = [], options = {}) {
 
-        this.loadingModal = document.querySelector('[data-jfs-loading]');
-
         this.defaultValues = this.generateDefaults(options);
 
         this.scrollElements = document.querySelectorAll('[data-jfs]');
@@ -182,8 +180,6 @@ class JFS {
 
         }
 
-        if(this.loadingModal) this.loadingModal.style.display = "none";
-
         let that = this;
 
         window.onscroll = function() {
@@ -275,10 +271,10 @@ class JFS {
 
             eventObject.element = this.eventElements[i];
             eventObject.animation = {};
-            eventObject.animation.name = this.eventElements[i].getAttribute('data-jfs-event') ? this.eventElements[i].getAttribute('data-jfs-event') : "grow";
-            eventObject.animation.duration = this.eventElements[i].getAttribute('data-jfs-duration') ? parseInt(this.eventElements[i].getAttribute('data-jfs-duration'))/1000 + "s" : "0.6s";
-            eventObject.animation.delay = this.eventElements[i].getAttribute('data-jfs-delay') ? parseInt(this.eventElements[i].getAttribute('data-jfs-delay'))/1000 + "s" : "0s";
-            eventObject.animation.easing = this.eventElements[i].getAttribute('data-jfs-easing') ? this.eventElements[i].getAttribute('data-jfs-easing') : "ease";
+            eventObject.animation.name = this.eventElements[i].getAttribute('data-jfs-event') ? this.eventElements[i].getAttribute('data-jfs-event') : this.defaultValues.name;
+            eventObject.animation.duration = this.eventElements[i].getAttribute('data-jfs-duration') ? parseInt(this.eventElements[i].getAttribute('data-jfs-duration'))/1000 + "s" : this.defaultValues.duration;
+            eventObject.animation.delay = this.eventElements[i].getAttribute('data-jfs-delay') ? parseInt(this.eventElements[i].getAttribute('data-jfs-delay'))/1000 + "s" : this.defaultValues.delay;
+            eventObject.animation.easing = this.eventElements[i].getAttribute('data-jfs-easing') ? this.eventElements[i].getAttribute('data-jfs-easing') : this.defaultValues.easing;
             eventObject.animation.triggered = false;
 
             eventObjects.push(eventObject);

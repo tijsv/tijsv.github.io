@@ -1,0 +1,54 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+span {
+  display: inline-block;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.h-2px {
+  height: 2px;
+}
+
+.font-heavy {
+  font-family: "Poppins", sans-serif;
+}
+
+.bg-white-to-transparant-top {
+  background-image: linear-gradient(to top, #22292f, #22292f, rgba(0, 0, 0, 0));
+}
+
+.bg-white-to-transparant-bottom {
+  background-image: linear-gradient(to bottom, #22292f, #22292f, rgba(0, 0, 0, 0));
+}
+
+.click-animation {
+  animation-name: clickAnimation;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+}
+
+@keyframes clickAnimation {
+  30% {
+    transform: scale(1.9);
+  }
+  60% {
+    transform: scale(2);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

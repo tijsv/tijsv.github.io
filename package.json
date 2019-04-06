@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "watch": "sass --no-source-map --watch style.scss:css/style.css",
+    "build": "npx tailwind build tailwind.css -c ./tailwind.js -o ./tailwind_compiled.css --no-autoprefixer",
+    "purge": "purgecss --css ./tailwind_compiled.css --content ./index.html --out css --config ./purgecss.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^0.7.4"
+  }
+}
